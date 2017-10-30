@@ -16,6 +16,9 @@ module.exports = {
   css: [
     'assets/scss/global.css'
   ],
+  plugins: [
+    '~/plugins/push-menu/index.js'
+  ],
   /*
   ** Customize the progress bar color
   */

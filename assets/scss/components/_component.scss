@@ -1,0 +1,14 @@
+.section__wrap {
+  display: flex;
+}
+.content__wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.cell {
+  flex: 0 0 auto;
+  min-height: 0px;
+  min-width: 0px;
+  width: 100%;
+}

@@ -20,17 +20,12 @@ html {
 
 @import "layout/normalize";
 @import "layout/typography";
+@import "layout/background";
 @import "layout/header";
 @import "layout/main";
 
 /* *** Components *** */
 
-// @navigation
+// @component
 
-@import "components/navigation";
-
-/* *** Pages *** */
-
-// @home
-
-@import "pages/home";
+@import "components/component";
