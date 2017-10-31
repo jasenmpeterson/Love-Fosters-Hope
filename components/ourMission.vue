@@ -37,6 +37,8 @@
     background-size: cover !important;
     background-position: center center !important;
     color: #fff;
+    box-shadow: inset 0 -15px 15px -15px rgba(0,0,0,.5);
+    border-bottom: 1px solid rgba(255,255,255,.2)
   }
   .cell {
     width: 50%;

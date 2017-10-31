@@ -8,6 +8,14 @@ main {
   grid-template-columns: [col-left-start] 2fr [col-main-start] 4fr [col-main-end];
   grid-template-rows: [row-header-start] auto [row-content-start] auto [row-footer-start] auto [row-footer-end];
   position: relative;
+  height: 100vh;
+}
+.page__wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
 }
 .wrap,
 .push__menu__container {

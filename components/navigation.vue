@@ -3,7 +3,7 @@
     <ul>
       <li v-for="(page, index) in navigation[0]">
         <nuxt-link :to="page.object_slug">
-          {{ page.title }}
+          <span :data-hover="page.title">{{ page.title }}</span>
         </nuxt-link>
       </li>
     </ul>
@@ -23,8 +23,10 @@
   }
 </script>
 <style scoped>
+  /* TODO - Links Hovers */
+  /* Transition in heart on hover?? */
   .navigation__wrap {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
@@ -45,13 +47,33 @@
     padding: 0;
     list-style-type: none;
   }
+  li {
+    padding: 1rem 0;
+  }
   li a {
-    font-weight: 700;
+    font-weight: 400;
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
     display: block;
-    padding: 0.9rem;
+    overflow: hidden;
+  }
+  li a span {
+    position: relative;
+    display: block;
+    transition: transform 0.3s, color 0.3s;
+  }
+  li a span:before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    font-weight: 900;
+    transform: translate3d(0,0,0);
+    color: #F35D54;
+  }
+  li a:hover span,
+  li a:focus span {
+    transform: translateY(-100%);
   }
   li:not(:last-child) {
     border-bottom: 1px solid rgba(255,255,255,.3);

@@ -21,6 +21,7 @@
   }
 </script>
 <style scoped>
+  /* More interesting hover effect for hamburger icon*/
   header {
     display: flex;
     justify-content:  space-between;
@@ -41,6 +42,10 @@
     height: 25px;
     cursor: pointer;
   }
+  .cell.hamburger__menu,
+  .menu__button {
+    height: 25px;
+  }
   .menu__button {
     position: relative;
   }
@@ -54,9 +59,9 @@
     border-radius: 4px;
     transition: 300ms ease-out;
   }
-  .menu__button__inner:hover,
-  .menu__button__inner:hover:before,
-  .menu__button__inner:hover:after {
+  .menu__button:hover .menu__button__inner,
+  .menu__button:hover   .menu__button__inner:before,
+  .menu__button:hover   .menu__button__inner:after {
     background-color: #F35D54;
   }
   .menu__button__inner:before,

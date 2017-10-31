@@ -1,0 +1,26 @@
+// TODO - Button hover.
+.btn {
+  display: block;
+  width: 185px;
+  font-weight: 700;
+  padding: 0.8rem 0;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(0,0,0,1);
+  border: 1px solid rgba(255,255,255,.3);
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+btn.yellow {
+  background: linear-gradient(135deg, #FCCD00 20%, #E3B901 80%);
+}
+
+.btn.red {
+  background: linear-gradient(to right, rgba(243,93,84,1) 0%, rgba(240,84,73,1) 20%, rgba(231,56,39,1) 80%);
+}

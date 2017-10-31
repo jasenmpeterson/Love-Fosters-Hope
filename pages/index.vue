@@ -1,12 +1,15 @@
 <template>
   <div class="wrap">
-    <ourMissionComponent/>
+    <ourMission/>
+    <ourCamps/>
   </div>
 </template>
 <script>
   // TODO - Dynamic meta name and content
+  // TODO - Camps Section
   import axios from 'axios'
-  import ourMissionComponent from '../components/ourMission.vue'
+  import ourMission from '../components/ourMission.vue'
+  import ourCamps from '../components/ourCamps.vue'
   export default {
     // retrieve data and commit it so that page components can access via the store.
     async asyncData ({ store, params }) {
@@ -45,7 +48,8 @@
       }
     },
     components: {
-      ourMissionComponent
+      ourMission,
+      ourCamps
     }
   }
 </script>
