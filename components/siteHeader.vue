@@ -32,6 +32,9 @@
     z-index: 20;
     width: 100%;
     padding: 1.5rem 3.5rem;
+    background-color: rgba(0,0,0,.1);
+    border-bottom: 0.0625rem solid rgba(255,255,255,.1);
+    box-shadow: 0 15px 15px -15px rgba(0,0,0,.4);
   }
   .cell.logo__container {
     width: 120px;

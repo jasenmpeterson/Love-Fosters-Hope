@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8cc0aa9-df63-47e5-ad1e-24f7f880bb1a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/global.css" afterPath="$PROJECT_DIR$/assets/scss/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/global.css.map" afterPath="$PROJECT_DIR$/assets/scss/global.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/layout/_buttons.scss" afterPath="$PROJECT_DIR$/assets/scss/layout/_buttons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/navigation.vue" afterPath="$PROJECT_DIR$/components/navigation.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/siteHeader.vue" afterPath="$PROJECT_DIR$/components/siteHeader.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,17 +23,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="siteHeader.vue" pinned="true" current-in-tab="false">
+      <file leaf-file-name="siteHeader.vue" pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/siteHeader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="446">
+              <caret line="36" column="47" lean-forward="false" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_buttons.scss" pinned="true" current-in-tab="true">
+      <file leaf-file-name="_buttons.scss" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scss/layout/_buttons.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -137,9 +132,9 @@
         <option value="$PROJECT_DIR$/assets/scss/global.scss" />
         <option value="$PROJECT_DIR$/assets/scss/layout/_typography.scss" />
         <option value="$PROJECT_DIR$/components/navigation.vue" />
-        <option value="$PROJECT_DIR$/components/siteHeader.vue" />
         <option value="$PROJECT_DIR$/components/ourCamps.vue" />
         <option value="$PROJECT_DIR$/assets/scss/layout/_buttons.scss" />
+        <option value="$PROJECT_DIR$/components/siteHeader.vue" />
       </list>
     </option>
   </component>
@@ -671,14 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/siteHeader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/layout/_typography.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -701,6 +688,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/siteHeader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="36" column="47" lean-forward="false" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
           <folding />
         </state>
       </provider>
