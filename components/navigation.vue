@@ -23,8 +23,7 @@
   }
 </script>
 <style scoped>
-  /* TODO - Links Hovers */
-  /* Transition in heart on hover?? */
+  /* TODO - Transition in heart on hover?? */
   .navigation__wrap {
     position: fixed;
     top: 0;

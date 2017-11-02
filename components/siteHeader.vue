@@ -21,7 +21,6 @@
   }
 </script>
 <style scoped>
-  /* More interesting hover effect for hamburger icon*/
   header {
     display: flex;
     justify-content:  space-between;

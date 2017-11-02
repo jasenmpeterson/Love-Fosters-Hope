@@ -1,7 +1,6 @@
-// TODO - Button hover.
 .btn {
-  display: block;
-  width: 185px;
+  display: inline-block;
+  width: 11.5625rem;
   font-weight: 700;
   padding: 0.8rem 0;
   overflow: hidden;
@@ -10,17 +9,54 @@
   color: white;
   text-align: center;
   position: relative;
-  border-radius: 2px;
-  box-shadow: 0 0 15px rgba(0,0,0,1);
-  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 0.125rem;
+  box-shadow: 0 0 0.9375rem rgba(0,0,0,1);
+  border: 0.125rem solid rgba(255,255,255,.3);
   font-size: 0.8rem;
   margin-top: 1.5rem;
+  transition: all 0.45s ease-out;
+  position: relative;
+  z-index: 100;
 }
 
-btn.yellow {
-  background: linear-gradient(135deg, #FCCD00 20%, #E3B901 80%);
+.btn:before {
+  border-radius: inherit;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: -100;
+  transition: opacity 0.45s ease-out;
+}
+
+.btn:hover:before {
+  opacity: 1;
+}
+
+.btn.yellow {
+  background-image: linear-gradient(to right, rgba(252,205,0,1) 0%, rgba(227,185,1,1) 20%, rgba(236,195,39,1) 80%);
+}
+
+.btn.yellow:before {
+  background-image: linear-gradient(to right, rgba(243,93,84,1) 0%, rgba(240,84,73,1) 20%, rgba(231,56,39,1) 80%);
+}
+
+.btn.yellow:hover {
+  border-color: rgba(243,93,84,1);
 }
 
 .btn.red {
-  background: linear-gradient(to right, rgba(243,93,84,1) 0%, rgba(240,84,73,1) 20%, rgba(231,56,39,1) 80%);
+  background-image: linear-gradient(to right, rgba(243,93,84,1) 0%, rgba(240,84,73,1) 20%, rgba(231,56,39,1) 80%);
+}
+
+.btn.red:before {
+  background-image: linear-gradient(to right, rgba(252,205,0,1) 0%, rgba(227,185,1,1) 20%, rgba(236,195,39,1) 80%);
+}
+
+.btn.red:hover {
+  border-color: rgba(252,205,0,1);
 }
