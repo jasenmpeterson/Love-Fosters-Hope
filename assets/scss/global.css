@@ -531,7 +531,7 @@ main {
   margin-top: 1.5rem;
   transition: all 0.45s ease-out;
   position: relative;
-  z-index: 100; }
+  z-index: 2; }
 
 .btn:before {
   border-radius: inherit;

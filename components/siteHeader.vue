@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="header">
     <div class="cell logo__container">
       <nuxt-link to="/">
         <img src="logo/logo.svg">
@@ -26,15 +26,26 @@
     justify-content:  space-between;
     align-items: center;
     grid-column: col-left-start/col-main-end;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 20;
     width: 100%;
     padding: 1.5rem 3.5rem;
-    background-color: rgba(0,0,0,.1);
-    border-bottom: 0.0625rem solid rgba(255,255,255,.1);
-    box-shadow: 0 15px 15px -15px rgba(0,0,0,.4);
+    transition: 300ms ease-out;
+    background: rgba(0,0,0,0.2);
+    border-bottom: 0.0625rem solid rgba(255,255,255,0.2);
+    box-shadow: inset 0 -15px 15px -15px rgba(252,205,0,0.2);
+    pointer-events: none;
+  }
+  header.inactive {
+    opacity: 0;
+  }
+  header.active {
+    opacity: 1;
+  }
+  header > * {
+    pointer-events: auto;
   }
   .cell.logo__container {
     width: 120px;
@@ -54,7 +65,7 @@
   .menu__button__inner,
   .menu__button__inner:before,
   .menu__button__inner:after {
-    background-color: #FCCD00;
+    background-color: #E3B901;
     position: absolute;
     width: 35px;
     height: 4px;
@@ -76,5 +87,8 @@
   }
   .menu__button__inner:after {
     top: 20px;
+  }
+  img {
+    width: 5.625rem;
   }
 </style>

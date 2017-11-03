@@ -2,6 +2,7 @@
   <div class="wrap">
     <ourMission/>
     <ourCamps/>
+    <featuredNeed/>
   </div>
 </template>
 <script>
@@ -10,12 +11,14 @@
   import axios from 'axios'
   import ourMission from '../components/ourMission.vue'
   import ourCamps from '../components/ourCamps.vue'
+  import featuredNeed from '../components/featuredNeed.vue'
   export default {
     // retrieve data and commit it so that page components can access via the store.
     async asyncData ({ store, params }) {
-      let [ourMission, ourCamps] = await Promise.all([
+      let [ourMission, ourCamps, featuredNeed] = await Promise.all([
         axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/5'),
-        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/9')
+        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/9'),
+        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/needed_now')
       ])
       // our mission
       const missionData = {
@@ -25,9 +28,14 @@
       const campsData = {
         camps: ourCamps.data
       }
+      // featured need
+      const featuredNeedData = {
+        featuredNeed: featuredNeed.data
+      }
       const pageData = {
         missionData,
-        campsData
+        campsData,
+        featuredNeedData
       }
       store.commit('setPageData', pageData)
     },
@@ -49,7 +57,8 @@
     },
     components: {
       ourMission,
-      ourCamps
+      ourCamps,
+      featuredNeed
     }
   }
 </script>
