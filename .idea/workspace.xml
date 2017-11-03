@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8cc0aa9-df63-47e5-ad1e-24f7f880bb1a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/featuredNeed.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugins/site-header/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/global.css" afterPath="$PROJECT_DIR$/assets/scss/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/global.css.map" afterPath="$PROJECT_DIR$/assets/scss/global.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/layout/_buttons.scss" afterPath="$PROJECT_DIR$/assets/scss/layout/_buttons.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/siteHeader.vue" afterPath="$PROJECT_DIR$/components/siteHeader.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nuxt.config.js" afterPath="$PROJECT_DIR$/nuxt.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index.vue" afterPath="$PROJECT_DIR$/pages/index.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,8 +17,8 @@
       <file leaf-file-name="siteHeader.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/siteHeader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="37" column="59" lean-forward="false" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
+            <state relative-caret-position="264">
+              <caret line="45" column="3" lean-forward="false" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -727,8 +719,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/siteHeader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="37" column="59" lean-forward="false" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
+        <state relative-caret-position="264">
+          <caret line="45" column="3" lean-forward="false" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
           <folding />
         </state>
       </provider>

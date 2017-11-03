@@ -41,10 +41,13 @@
   header.inactive {
     opacity: 0;
   }
+  header.inactive > * {
+    pointer-events: none;
+  }
   header.active {
     opacity: 1;
   }
-  header > * {
+  header.active > * {
     pointer-events: auto;
   }
   .cell.logo__container {
