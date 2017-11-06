@@ -8,6 +8,7 @@
             <h3>Featured Need</h3>
             <h1>{{pageData.featuredNeedData.featuredNeed[0].title.rendered}}</h1>
             <article v-html="pageData.featuredNeedData.featuredNeed[0].content.rendered"></article>
+            <donateForm/>
           </div>
         </div>
       </div>
@@ -17,8 +18,12 @@
 <script>
   import { mapGetters } from 'vuex'
   import NuxtLink from '../.nuxt/components/nuxt-link'
+  import donateForm from '../components/donateForm.vue'
   export default {
-    components: {NuxtLink},
+    components: {
+      NuxtLink,
+      donateForm
+    },
     computed: {
       // fetch navigation from store
       ...mapGetters({

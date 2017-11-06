@@ -1,7 +1,7 @@
 .btn {
   display: inline-block;
   width: 11.5625rem;
-  font-weight: 700;
+  font-weight: 900;
   padding: 0.8rem 0;
   overflow: hidden;
   text-decoration: none;
@@ -38,7 +38,7 @@
 }
 
 .btn.yellow {
-  background-image: linear-gradient(to right, rgba(252,205,0,1) 0%, rgba(227,185,1,1) 20%, rgba(236,195,39,1) 80%);
+  background-image: linear-gradient(to right, rgba(252,205,0,1) 0%, rgba(252,205,0,1) 20%, rgba(236,195,39,1) 80%);
 }
 
 .btn.yellow:before {
@@ -54,7 +54,7 @@
 }
 
 .btn.red:before {
-  background-image: linear-gradient(to right, rgba(252,205,0,1) 0%, rgba(227,185,1,1) 20%, rgba(236,195,39,1) 80%);
+  background-image: linear-gradient(to right, #fccd00 0%, #f9d648 20%, #f9d339 80%);
 }
 
 .btn.red:hover {
