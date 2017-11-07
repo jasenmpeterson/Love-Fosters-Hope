@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export default {
-  post (key, amount) {
+  post (key, amount, description) {
     let config = {
       method: 'post',
       baseURL: 'https://api.sandbox.paypal.com/v1/',
@@ -28,35 +28,25 @@ export default {
                 'insurance': '0.00'
               }
             },
-            'description': 'LFH donation',
-            'custom': 'EBAY_EMS_90048630024435',
-            'invoice_number': '48787589673',
+            'description': 'LFH Donation — ' + description,
+            'custom': '',
+            'invoice_number': '',
             'payment_options': {
               'allowed_payment_method': 'INSTANT_FUNDING_SOURCE'
             },
-            'soft_descriptor': 'ECHI5786786',
+            'soft_descriptor': '',
             'item_list': {
               'items': [
                 {
-                  'name': 'LFH Donation',
-                  'description': 'LFH Donation',
+                  'name': 'LFH Donation — ' + description,
+                  'description': 'LFH Donation — ' + description,
                   'quantity': '1',
                   'price': amount,
                   'tax': '0.00',
-                  'sku': '1',
+                  'sku': 'LFH Donation — ' + description,
                   'currency': 'USD'
                 }
-              ],
-              'shipping_address': {
-                'recipient_name': 'Brian Robinson',
-                'line1': '4th Floor',
-                'line2': 'Unit #34',
-                'city': 'San Jose',
-                'country_code': 'US',
-                'postal_code': '95131',
-                'phone': '011862212345678',
-                'state': 'CA'
-              }
+              ]
             }
           }
         ],

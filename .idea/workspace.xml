@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8cc0aa9-df63-47e5-ad1e-24f7f880bb1a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/jasenpeterson.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/scss/layout/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/components/donateForm.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/paypal.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/paypal/executePayment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/paypal/payment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/paypal/tokenRequest.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/README.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/global.css" afterPath="$PROJECT_DIR$/assets/scss/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/global.css.map" afterPath="$PROJECT_DIR$/assets/scss/global.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/global.scss" afterPath="$PROJECT_DIR$/assets/scss/global.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scss/layout/_buttons.scss" afterPath="$PROJECT_DIR$/assets/scss/layout/_buttons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/donateForm.vue" afterPath="$PROJECT_DIR$/components/donateForm.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/featuredNeed.vue" afterPath="$PROJECT_DIR$/components/featuredNeed.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paypal/payment.js" afterPath="$PROJECT_DIR$/paypal/payment.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="paypal.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="paypal.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/paypal.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            <state relative-caret-position="345">
+              <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
               <folding>
                 <element signature="e#62#117#0" expanded="true" />
               </folding>
@@ -41,8 +30,8 @@
       <file leaf-file-name="donateForm.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/donateForm.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+            <state relative-caret-position="90">
+              <caret line="6" column="85" lean-forward="false" selection-start-line="6" selection-start-column="85" selection-end-line="6" selection-end-column="85" />
               <folding>
                 <element signature="e#308#363#0" expanded="true" />
               </folding>
@@ -50,21 +39,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="executePayment.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paypal/executePayment.js">
+      <file leaf-file-name="featuredNeed.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/featuredNeed.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="161">
+              <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payment.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="payment.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/paypal/payment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" column="53" lean-forward="false" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+            <state relative-caret-position="383">
+              <caret line="45" column="56" lean-forward="false" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -130,7 +119,6 @@
         <option value="$PROJECT_DIR$/plugins/push-menu/index.js" />
         <option value="$PROJECT_DIR$/plugins/site-header/index.js" />
         <option value="$PROJECT_DIR$/components/siteHeader.vue" />
-        <option value="$PROJECT_DIR$/components/featuredNeed.vue" />
         <option value="$PROJECT_DIR$/assets/scss/global.scss" />
         <option value="$PROJECT_DIR$/assets/scss/layout/_forms.scss" />
         <option value="$PROJECT_DIR$/assets/scss/layout/_buttons.scss" />
@@ -141,10 +129,11 @@
         <option value="$PROJECT_DIR$/paypal/paymentApproval.js" />
         <option value="$PROJECT_DIR$/nuxt.config.js" />
         <option value="$PROJECT_DIR$/store/index.js" />
-        <option value="$PROJECT_DIR$/paypal/payment.js" />
-        <option value="$PROJECT_DIR$/components/donateForm.vue" />
         <option value="$PROJECT_DIR$/pages/paypal.vue" />
         <option value="$PROJECT_DIR$/paypal/executePayment.js" />
+        <option value="$PROJECT_DIR$/components/featuredNeed.vue" />
+        <option value="$PROJECT_DIR$/components/donateForm.vue" />
+        <option value="$PROJECT_DIR$/paypal/payment.js" />
       </list>
     </option>
   </component>
@@ -321,7 +310,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -329,7 +317,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29383314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29383314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27181688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -594,16 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/featuredNeed.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="8" column="81" lean-forward="true" selection-start-line="8" selection-start-column="81" selection-end-line="8" selection-end-column="81" />
-          <folding>
-            <element signature="e#731#764#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/layout/_forms.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -685,11 +663,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/paypal/payment.js">
+    <entry file="file://$PROJECT_DIR$/pages/paypal.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="53" lean-forward="false" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
-          <folding />
+        <state relative-caret-position="345">
+          <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="e#62#117#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -703,21 +683,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/donateForm.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+        <state relative-caret-position="90">
+          <caret line="6" column="85" lean-forward="false" selection-start-line="6" selection-start-column="85" selection-end-line="6" selection-end-column="85" />
           <folding>
             <element signature="e#308#363#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/paypal.vue">
+    <entry file="file://$PROJECT_DIR$/components/featuredNeed.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding>
-            <element signature="e#62#117#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="161">
+          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paypal/payment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="45" column="56" lean-forward="false" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -15,9 +15,13 @@
   export default {
     data () {
       return {
-        key: null
+        key: null,
+        donationDescription: this.donationTitle
       }
     },
+    props: [
+      'donationTitle'
+    ],
     methods: {
       payPal: function () {
         return paypalTokenRequest.request()
@@ -29,7 +33,7 @@
           })
       },
       payPalCreatePayment: function (key) {
-        return paypalPayment.post(key, '10.00')
+        return paypalPayment.post(key, '10.00', this.donationDescription)
           .then(result => {
             console.log(result)
             const approvalURL = result.data.links[1].href
