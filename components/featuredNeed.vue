@@ -8,7 +8,7 @@
             <h3>Featured Need</h3>
             <h1>{{pageData.featuredNeedData.featuredNeed[0].title.rendered}}</h1>
             <article v-html="pageData.featuredNeedData.featuredNeed[0].content.rendered"></article>
-            <donateForm :donationTitle="pageData.featuredNeedData.featuredNeed[0].title.rendered"/>
+            <donateForm :donationDescription="pageData.featuredNeedData.featuredNeed[0].content.rendered" :donationTitle="pageData.featuredNeedData.featuredNeed[0].title.rendered"/>
           </div>
         </div>
       </div>

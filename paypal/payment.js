@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export default {
-  post (key, amount, description) {
+  post (key, amount, description, title) {
     let config = {
       method: 'post',
       baseURL: 'https://api.sandbox.paypal.com/v1/',
@@ -28,7 +28,7 @@ export default {
                 'insurance': '0.00'
               }
             },
-            'description': 'LFH Donation — ' + description,
+            'description': description,
             'custom': '',
             'invoice_number': '',
             'payment_options': {
@@ -38,12 +38,12 @@ export default {
             'item_list': {
               'items': [
                 {
-                  'name': 'LFH Donation — ' + description,
-                  'description': 'LFH Donation — ' + description,
+                  'name': title,
+                  'description': description,
                   'quantity': '1',
                   'price': amount,
                   'tax': '0.00',
-                  'sku': 'LFH Donation — ' + description,
+                  'sku': title,
                   'currency': 'USD'
                 }
               ]

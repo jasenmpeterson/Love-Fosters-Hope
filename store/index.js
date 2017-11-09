@@ -5,7 +5,8 @@ const store = () => {
   return new Vuex.Store({
     state: {
       pageData: null,
-      siteNavigation: null
+      siteNavigation: null,
+      payPalPaymentConfirmation: null
     },
     actions: {
       async nuxtServerInit ({ commit }) {
@@ -24,6 +25,10 @@ const store = () => {
       },
       setPageData (state, data) {
         state.pageData = data
+      },
+      setPayPalConfirmationDetails (state, data) {
+        console.log(data)
+        state.payPalPaymentConfirmation = data
       }
     },
     getters: {
@@ -32,6 +37,9 @@ const store = () => {
       },
       pageData: state => {
         return state.pageData
+      },
+      payPalConfirmationDetails: state => {
+        return state.payPalPaymentConfirmation
       }
     }
   })
