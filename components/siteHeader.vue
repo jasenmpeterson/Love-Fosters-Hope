@@ -40,14 +40,12 @@
   }
   header.inactive {
     opacity: 0;
-  }
-  header.inactive > * {
-    pointer-events: none;
+    z-index: -1;
   }
   header.active {
     opacity: 1;
   }
-  header.active > * {
+  header > * {
     pointer-events: auto;
   }
   .cell.logo__container {

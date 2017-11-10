@@ -27,7 +27,6 @@ const store = () => {
         state.pageData = data
       },
       setPayPalConfirmationDetails (state, data) {
-        console.log(data)
         state.payPalPaymentConfirmation = data
       }
     },

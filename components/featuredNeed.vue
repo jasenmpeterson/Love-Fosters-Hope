@@ -59,6 +59,7 @@
 
   .wrap >>> .cell {
     width: 100%;
+    position: relative;
   }
 
   .wrap >>> p {
@@ -92,5 +93,4 @@
     font-weight: 900;
     margin-bottom: 0.5rem;
   }
-
 </style>
