@@ -1,24 +1,27 @@
 <template>
   <div class="form__wrap">
     <div class="form">
-      <form>
+      <form data-spirit-id="donate-form">
         <label>Donation Amount:</label>
         <input type="text" v-model="amount" placeholder="0.00">
         <a href="javascript:void(0)" class="btn red" v-on:click="donateSubmit">Submit</a>
       </form>
     </div>
-    <div class="modal" v-bind:class="[isActive ? activeClass : '']">
-      <svg version="1.1" class="svg-loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 80 80" xml:space="preserve">
+    <div class="modal" data-spirit-id="modal">
+      <svg data-spirit-id="modal-loader" version="1.1" class="svg-loader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 80 80" xml:space="preserve">
         <path id="spinner" fill="#F35D54" d="M40,72C22.4,72,8,57.6,8,40C8,22.4,22.4,8,40,8c17.6,0,32,14.4,32,32c0,1.1-0.9,2-2,2s-2-0.9-2-2c0-15.4-12.6-28-28-28S12,24.6,12,40s12.6,28,28,28c.1,0,2,0.9,2,2S41.1,72,40,72z">
           <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 40 40" to="360 40 40" dur="0.6s" repeatCount="indefinite"/>
         </path>
       </svg>
-      <p>Redirecting to PayPal...</p>
+      <p data-spirit-id="modal-text">Redirecting to PayPal...</p>
     </div>
   </div>
 </template>
 <script>
   // TODO - Form Validation.
+  // TODO - Error Handing.
+  import spirit from 'spiritjs'
+  import { TweenMax, TimelineMax } from 'gsap'
   import paypalTokenRequest from '../paypal/tokenRequest'
   import paypalPayment from '../paypal/payment'
   export default {
@@ -27,9 +30,7 @@
         key: null,
         description: this.donationDescription,
         title: this.donationTitle,
-        amount: null,
-        isActive: false,
-        activeClass: 'active'
+        amount: null
       }
     },
     props: [
@@ -38,7 +39,14 @@
     ],
     methods: {
       payPal: function () {
-        this.isActive = true
+        spirit.setup({
+          tween: TweenMax,
+          timeline: TimelineMax
+        }).then(() => { // load GSAP from CDN
+          spirit.load('/animations/featured-need-modal/featured-need-modal.json').then(groups => { // load animation data
+            groups.get('Featured Need Component').construct().play() // construct group and play it
+          })
+        })
         return paypalTokenRequest.request()
           .then(result => {
             this.key = result.data.access_token
@@ -66,15 +74,24 @@
 <style scoped>
   .form__wrap {
     margin-top: 2.5rem;
-    text-align: left;
+  }
+  .form__wrap,
+  .form__wrap input {
+    text-align: center;
   }
   .btn {
     box-shadow: 0 0 0.625rem rgba(0,0,0,0.1);
   }
   .modal {
-    height: 0;
-  }
-  .modal.active {
-    height: auto;
+    background-color: #fff;
+    box-shadow: 0 0 0.625rem rgba(0,0,0,0.1);
+    height: 12.5rem;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
   }
 </style>

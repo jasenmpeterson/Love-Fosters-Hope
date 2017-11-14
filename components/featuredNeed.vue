@@ -3,11 +3,11 @@
     <div class="content__wrap" v-for="(componentData, index) in pageData.featuredNeedData">
       <div class="cell featured__need__background" v-bind:style="{ backgroundImage: 'url(' + pageData.featuredNeedData.featuredNeed[0].better_featured_image.source_url + ')' }"></div>
       <div class="cell">
-        <div class="wrap">
+        <div class="wrap" data-spirit-id="featured-need-wrap">
           <div class="cell">
-            <h3>Featured Need</h3>
-            <h1>{{pageData.featuredNeedData.featuredNeed[0].title.rendered}}</h1>
-            <article v-html="pageData.featuredNeedData.featuredNeed[0].content.rendered"></article>
+            <h3 data-spirit-id="title">Featured Need</h3>
+            <h1 data-spirit-id="featured-need-title">{{pageData.featuredNeedData.featuredNeed[0].title.rendered}}</h1>
+            <article data-spirit-id="featured-need-article" v-html="pageData.featuredNeedData.featuredNeed[0].content.rendered"></article>
             <donateForm :donationDescription="pageData.featuredNeedData.featuredNeed[0].content.rendered" :donationTitle="pageData.featuredNeedData.featuredNeed[0].title.rendered"/>
           </div>
         </div>
