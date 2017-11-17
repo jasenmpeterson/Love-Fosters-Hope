@@ -3,6 +3,8 @@
     <ourMission/>
     <ourCamps/>
     <featuredNeed/>
+    <mentors/>
+    <latestPosts/>
   </div>
 </template>
 <script>
@@ -12,13 +14,17 @@
   import ourMission from '../components/ourMission.vue'
   import ourCamps from '../components/ourCamps.vue'
   import featuredNeed from '../components/featuredNeed.vue'
+  import mentors from '../components/mentors.vue'
+  import latestPosts from '../components/latestPosts.vue'
   export default {
     // retrieve data and commit it so that page components can access via the store.
     async asyncData ({ store, params }) {
-      let [ourMission, ourCamps, featuredNeed] = await Promise.all([
+      let [ourMission, ourCamps, featuredNeed, mentors, latestPosts] = await Promise.all([
         axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/5'),
         axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/9'),
-        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/needed_now')
+        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/needed_now'),
+        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/7'),
+        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/posts')
       ])
       // our mission
       const missionData = {
@@ -32,10 +38,20 @@
       const featuredNeedData = {
         featuredNeed: featuredNeed.data
       }
+      // mentors
+      const mentorsData = {
+        mentors: mentors.data
+      }
+      // latest post
+      const latestPostsData = {
+        latestPosts: latestPosts.data
+      }
       const pageData = {
         missionData,
         campsData,
-        featuredNeedData
+        featuredNeedData,
+        mentorsData,
+        latestPostsData
       }
       store.commit('setPageData', pageData)
     },
@@ -58,7 +74,9 @@
     components: {
       ourMission,
       ourCamps,
-      featuredNeed
+      featuredNeed,
+      mentors,
+      latestPosts
     }
   }
 </script>

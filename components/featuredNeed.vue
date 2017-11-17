@@ -1,6 +1,6 @@
 <template>
   <div class="component__wrap">
-    <div class="content__wrap" v-for="(componentData, index) in pageData.featuredNeedData">
+    <div class="content__wrap" v-for="(componentData, index) in pageData.featuredNeedData" v-bind:key="index">
       <div class="cell featured__need__background" v-bind:style="{ backgroundImage: 'url(' + pageData.featuredNeedData.featuredNeed[0].better_featured_image.source_url + ')' }"></div>
       <div class="cell">
         <div class="wrap" data-spirit-id="featured-need-wrap">
@@ -25,7 +25,6 @@
       donateForm
     },
     computed: {
-      // fetch navigation from store
       ...mapGetters({
         pageData: 'pageData'
       })
@@ -36,7 +35,6 @@
 
   .component__wrap {
     height: 100vh;
-    box-shadow: inset 0 15px 15px -15px rgba(0,0,0,.5)
   }
 
   .featured__need__background {

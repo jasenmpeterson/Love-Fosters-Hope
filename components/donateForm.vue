@@ -20,6 +20,8 @@
 <script>
   // TODO - Form Validation.
   // TODO - Error Handing.
+  // TODO - Progress Indicator w/ percentage.
+  // TODO - potential (new) featured need component animation - https://codepen.io/koenigsegg1/pen/WrrXzz
   import spirit from 'spiritjs'
   import { TweenMax, TimelineMax } from 'gsap'
   import paypalTokenRequest from '../paypal/tokenRequest'

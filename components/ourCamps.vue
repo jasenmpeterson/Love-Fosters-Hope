@@ -1,6 +1,6 @@
 <template>
   <div class="component__wrap" v-bind:style="{ backgroundImage: 'url(' + pageData.campsData.camps.better_featured_image.source_url + ')' }">
-    <div class="content__wrap" v-for="(componentData, index) in pageData.campsData">
+    <div class="content__wrap" v-for="(componentData, index) in pageData.campsData" v-bind:key="index">
       <div class="cell">
         <h4 v-html="componentData.title.rendered"></h4>
         <article v-html="componentData.content.rendered"></article>
@@ -15,7 +15,6 @@
   export default {
     components: {NuxtLink},
     computed: {
-      // fetch navigation from store
       ...mapGetters({
         pageData: 'pageData'
       })
