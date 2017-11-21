@@ -1,9 +1,9 @@
 <template>
   <div class="wrap">
     <ourMission/>
+    <mentors/>
     <ourCamps/>
     <featuredNeed/>
-    <mentors/>
     <latestPosts/>
   </div>
 </template>
@@ -57,7 +57,7 @@
     },
     head () {
       return {
-        title: `Love Fosters Hope — Home`,
+        title: 'Love Fosters Hope — Home',
         meta: [
           {
             name: 'description',

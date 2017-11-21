@@ -6,22 +6,28 @@ const store = () => {
     state: {
       pageData: null,
       siteNavigation: null,
+      pageOptions: null,
       payPalPaymentConfirmation: null
     },
     actions: {
       async nuxtServerInit ({ commit }) {
-        return axios.get('http://localhost.lovefostershope:9999/wp-json/wp-api-menus/v2/menus/5').then((response) => {
-          const success = Object.is(response.statusText, 'OK')
-          if (success) {
-            const data = [response.data.items]
-            commit('setSiteNavigation', data)
-          }
-        })
+        return axios.all([
+          axios.get('http://localhost.lovefostershope:9999/wp-json/wp-api-menus/v2/menus/5'),
+          axios.get('http://localhost.lovefostershope:9999/wp-json/acf/v3/options/options')
+        ]).then(axios.spread(function (navigation, pageOptions) {
+          const navigationData = [navigation.data.items]
+          commit('setSiteNavigation', navigationData)
+          const pageOptionsData = [pageOptions.data]
+          commit('setPageOptions', pageOptionsData)
+        }))
       }
     },
     mutations: {
       setSiteNavigation (state, data) {
         state.siteNavigation = data
+      },
+      setPageOptions (state, data) {
+        state.pageOptions = data
       },
       setPageData (state, data) {
         state.pageData = data
@@ -33,6 +39,9 @@ const store = () => {
     getters: {
       navigation: state => {
         return state.siteNavigation
+      },
+      pageOptions: state => {
+        return state.pageOptions
       },
       pageData: state => {
         return state.pageData

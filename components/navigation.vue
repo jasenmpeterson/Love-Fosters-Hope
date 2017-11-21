@@ -27,13 +27,13 @@
   .navigation__wrap {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 100;
     visibility: visible;
     width: 300px;
     height: 100vh;
     background: linear-gradient(135deg, #FCCD00 20%, #E3B901 80%);
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
     transition: all 0.5s ease-out;
     padding: 2.5rem;
     box-shadow: inset 0 0 15px rgba(44,62,80,.3);

@@ -14,7 +14,7 @@ module.exports = {
     ]
   },
   css: [
-    'assets/scss/global.css'
+    'assets/css/global.css'
   ],
   plugins: [
     '~/plugins/push-menu/index.js',

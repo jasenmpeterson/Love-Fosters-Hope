@@ -1,6 +1,6 @@
 <template>
   <div class="component__wrap tint" v-bind:style="{ backgroundImage: 'url(' + pageData.missionData.mission.better_featured_image.source_url + ')' }">
-    <div class="content__wrap" v-for="(componentData, index) in pageData.missionData">
+    <div class="content__wrap" v-for="(componentData, index) in pageData.missionData" v-bind:key="index">
       <div class="cell">
         <article class="testimonial" v-html="componentData.acf.testimonial"></article>
       </div>
@@ -38,7 +38,6 @@
     background-position: center center !important;
     color: #fff;
     box-shadow: inset 0 -15px 15px -15px rgba(0,0,0,.5);
-    border-bottom: 1px solid rgba(255,255,255,.2)
   }
   .cell {
     width: 50%;

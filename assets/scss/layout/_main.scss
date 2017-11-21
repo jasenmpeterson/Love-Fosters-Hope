@@ -15,7 +15,8 @@ main {
   top: 0;
   left: 0;
   height: 100vh;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .wrap,
 .push__menu__container {
@@ -30,5 +31,5 @@ main {
   transition: transform 0.5s;
 }
 .push__menu__container.open {
-  transform: translate3d(300px, 0, 0);
+  transform: translate3d(-300px, 0, 0);
 }

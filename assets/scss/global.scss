@@ -18,18 +18,28 @@ html {
 
 // @main
 
-@import "layout/normalize";
-@import "layout/typography";
-@import "layout/background";
-@import "layout/header";
-@import "layout/main";
-@import "layout/buttons";
-@import "layout/buttons";
-@import "layout/forms";
-@import "layout/modal";
+@import "layout/normalize.scss";
+
+@import "layout/typography.scss";
+
+@import "layout/background.scss";
+
+@import "layout/header.scss";
+
+@import "layout/main.scss";
+
+@import "layout/buttons.scss";
+
+@import "layout/buttons.scss";
+
+@import "layout/forms.scss";
+
+@import "layout/modal.scss";
+
 
 /* *** Components *** */
 
 // @component
 
-@import "components/component";
+@import "components/component.scss";
+

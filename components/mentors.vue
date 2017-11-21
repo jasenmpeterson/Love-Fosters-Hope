@@ -34,7 +34,9 @@
     background-size: cover !important;
     background-position: center center !important;
     height: 100vh;
-		box-shadow: inset 0 -15px 15px -15px rgba(0,0,0,.5);
+    box-shadow: inset 0 -15px 15px -15px rgba(0,0,0,.5);
+    border-bottom: 1px solid rgba(255,255,255,1);
+    border-left: 1px solid #FFFDFD;
   }
 
   .cell {
@@ -51,13 +53,12 @@
 
 	article >>> h1 {
     color: #f35d54;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
     margin-bottom: 0.5rem;
   }
 
 	article >>> p {
-		font-size: 1rem;
     color: #6C6D71;
     line-height: 1.5;
 	}

@@ -61,7 +61,6 @@
   }
 
   .wrap >>> p {
-    font-size: 1rem;
     color: #6C6D71;
     line-height: 1.5;
   }
