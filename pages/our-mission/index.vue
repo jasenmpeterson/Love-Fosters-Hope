@@ -16,6 +16,23 @@
           </div>
         </div>
       </div>
+      <div class="content__wrap content__block__one">
+        <div class="cell">
+          <article v-html="pageData.ourMission.acf.our_mission_page_content.content_block"></article>
+        </div>
+      </div>
+      <div class="content__wrap content__block__two">
+        <div class="cell">
+          <div class="title__wrap">
+            <h1>{{pageData.ourMission.title.rendered}}</h1>
+            <div class="line__icon">
+              <span></span>
+              <img src="icons/mbri-hearth-bold.svg">
+            </div>
+          </div>
+          <article v-html="pageData.ourMission.acf.our_mission_page_content.content_block_b"></article>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -57,12 +74,11 @@ export default {
 <style scoped>
 
   .component__wrap {
-    padding-top: 15rem;
+    padding-top: 12rem;
   }
 
   .content__wrap {
-    max-width: 75rem;
-    margin: 0 auto;
+    padding: 0 6.5rem;
     flex-direction: column;
   }
 
@@ -96,6 +112,10 @@ export default {
     padding: 0 1.2rem;
   }
 
+  .content__wrap .statistic__wrap .icon img {
+    margin: 0 auto;
+  }
+
   .content__wrap .statistic__wrap:nth-of-type(odd) .icon img {
     width: 1rem;
   }
@@ -110,8 +130,11 @@ export default {
     align-self: stretch;
     justify-content: center;
     align-items: center;
-    width: 2.5rem;
     padding-right: 3.5rem;
+  }
+
+  .icon__wrap {
+    width: 2.5rem;
   }
 
   .icon:after {
@@ -124,4 +147,55 @@ export default {
     height: 100%;
     width: 1px;
   }
+
+  .content__block__one {
+    margin: 5rem 0;
+  }
+
+  .content__block__one .cell {
+    max-width: 65%;
+    margin-left: auto;
+    border-left: 1px solid #F6F6F6;
+    padding-left: 5rem;
+    position: relative;
+  }
+
+  .content__block__one .cell:before {
+    display: block;
+    content: url(/static/icons/balloon_man.svg);
+    width: 1.5rem;
+    position: absolute;
+    left: -5rem;
+    top: 0;
+  }
+
+  .content__block__one .cell:after {
+    display: block;
+    content: url(/static/icons/hearts_big_small.svg);
+    width: 5rem;
+    position: absolute;
+    right: 0;
+    top: -1rem;
+  }
+
+  .content__block__one .cell >>> h1 {
+    color: #F35D54;
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  .content__block__one .cell >>> p,
+  .content__block__two article >>> p {
+    color: #6C6D71;
+  }
+
+  .content__block__two {
+    max-width: 61.875rem;
+    margin: 8rem 0 2.5rem 0;
+  }
+
+  .content__block__two article >>> h1 {
+    color: #FCCD00;
+  }
+
 </style>

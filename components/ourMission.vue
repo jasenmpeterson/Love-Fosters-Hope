@@ -1,5 +1,6 @@
 <template>
-  <div class="component__wrap tint" v-bind:style="{ backgroundImage: 'url(' + pageData.missionData.mission.better_featured_image.source_url + ')' }">
+ 
+  <div class="component__wrap tint" v-if="pageData.missionData" v-bind:style="{ backgroundImage: 'url(' + pageData.missionData.mission.better_featured_image.source_url + ')' }">
     <div class="content__wrap" v-for="(componentData, index) in pageData.missionData" v-bind:key="index">
       <div class="cell">
         <article class="testimonial" v-html="componentData.acf.testimonial"></article>

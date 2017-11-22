@@ -1,5 +1,5 @@
 <template>
-	<div class="component__wrap tint" v-bind:style="{ backgroundImage: 'url(' + pageData.latestPostsData.latestPosts[0].better_featured_image.source_url + ')' }">
+	<div class="component__wrap tint" v-if="pageData.latestPostsData" v-bind:style="{ backgroundImage: 'url(' + pageData.latestPostsData.latestPosts[0].better_featured_image.source_url + ')' }">
 		<div class="content__wrap">
 			<div class="cell">
 				<article v-for="(item, index) in pageData.latestPostsData.latestPosts.slice(0,1)" v-bind:key="index">
