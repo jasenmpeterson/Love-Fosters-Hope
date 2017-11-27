@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <div class="component__wrap">
+    <div class="component__wrap" v-if="pageData.ourMission">
       <div class="content__wrap">
         <div class="statistic__wrap" v-for="(statisticsData, index) in pageData.ourMission.acf.our_mission_page_content.statistics" v-bind:key="index">
           <div class="icon">
@@ -34,11 +34,22 @@
         </div>
       </div>
     </div>
+    <div class="content__wrap content__block__three" v-bind:style="{ backgroundImage: 'url(' + pageData.ourMission.better_featured_image.source_url + ')' }">
+        <div class="cell">
+          <article v-html="pageData.ourMission.acf.our_mission_page_content.content_block_c"></article>
+        </div>
+    </div>
+    <div class="content__wrap donate__wrap">
+      <div class="cell">
+        <donationsCTA/>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 import axios from 'axios'
 import { mapGetters } from 'vuex'
+import donationsCTA from '../../components/donations-cta.vue'
 export default {
   async asyncData ({ store, params }) {
     let [ourMission] = await Promise.all([axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/5')])
@@ -68,7 +79,10 @@ export default {
   ...mapGetters({
     pageData: 'pageData'
   })
-}
+  },
+  components: {
+    donationsCTA
+  }
 }
 </script>
 <style scoped>
@@ -189,13 +203,60 @@ export default {
     color: #6C6D71;
   }
 
+  .content__block__two article >>> p {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
   .content__block__two {
-    max-width: 61.875rem;
-    margin: 8rem 0 2.5rem 0;
+    max-width: 100%;
+    margin: 8rem auto 2.5rem auto;
+    position: relative;
+  }
+
+  .content__block__two:after {
+    display: block;
+    content: url(/static/icons/hearts_big_small.svg);
+    width: 5.5rem;
+    position: absolute;
+    left: 2rem;
+    bottom: -4rem;
+  }
+
+  .content__block__two article {
+    position: relative;
+  }
+
+  .content__block__two article:after {
+    display: block;
+    content: url(/static/icons/mbri-hearth-bold.svg);
+    width: 1.5rem;
+    position: absolute;
+    right: -2rem;
+    bottom: 10rem;
+    opacity: 0.5;
   }
 
   .content__block__two article >>> h1 {
     color: #FCCD00;
+    font-size: 3rem;
+  }
+
+  .content__block__three {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 100vh;
+    justify-content: center;
+    color: #fff;
+    margin-top: 8rem;
+  }
+
+  .content__block__three .cell {
+    max-width: 40%;
+  }
+
+  .donate__wrap {
+    margin-bottom: 8rem;
   }
 
 </style>

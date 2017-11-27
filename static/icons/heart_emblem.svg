@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2855 8675 190 190">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-6 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fccd00;
+        opacity: 0.3;
+      }
+
+      .cls-2 {
+        stroke: #f27f79;
+        opacity: 0.5;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        stroke: #f35d54;
+      }
+
+      .cls-4 {
+        fill: #f27f79;
+        fill-rule: evenodd;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="icon" transform="translate(2158 8566)">
+    <g id="Ellipse_50" data-name="Ellipse 50" class="cls-1" transform="translate(697 109)">
+      <circle class="cls-5" cx="95" cy="95" r="95"/>
+      <circle class="cls-6" cx="95" cy="95" r="94.5"/>
+    </g>
+    <g id="Ellipse_49" data-name="Ellipse 49" class="cls-2" transform="translate(737 149)">
+      <circle class="cls-5" cx="55" cy="55" r="55"/>
+      <circle class="cls-6" cx="55" cy="55" r="54.5"/>
+    </g>
+    <path id="Path_39" data-name="Path 39" class="cls-3" d="M30,.5A29.5,29.5,0,1,1,.5,30,29.5,29.5,0,0,1,30,.5Z" transform="translate(762 174)"/>
+    <g id="Heart" transform="translate(-3222 -7218)">
+      <path id="Heart-2" data-name="Heart" class="cls-4" d="M19.084,1.681a5.566,5.566,0,0,0-7.922,0l-.779.779L9.6,1.681A5.6,5.6,0,0,0,1.681,9.6l8.7,8.7,8.7-8.7a5.566,5.566,0,0,0,0-7.922" transform="translate(4003.975 7413.242)"/>
+    </g>
+  </g>
+</svg>

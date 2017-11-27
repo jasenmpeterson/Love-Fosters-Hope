@@ -2,7 +2,7 @@
 	<div class="component__wrap">
 		<div class="content__wrap">
 			<div class="cell">
-				<article v-html="newsletter[0].acf.email_subscription_copy"></article>
+				<article v-html="data[0].acf.email_subscription_copy"></article>
 				 <div class="form__wrap">
 					<div class="form">
 						<form>
@@ -20,7 +20,7 @@ import { mapGetters } from 'vuex'
 export default {
 		computed: {
       ...mapGetters({
-        newsletter: 'pageOptions'
+        data: 'pageOptions'
       })
     }
 }
