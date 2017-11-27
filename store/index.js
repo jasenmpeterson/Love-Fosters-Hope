@@ -7,6 +7,7 @@ const store = () => {
       pageData: null,
       siteNavigation: null,
       pageOptions: null,
+      posts: null,
       payPalPaymentConfirmation: null
     },
     actions: {
@@ -34,6 +35,9 @@ const store = () => {
       },
       setPayPalConfirmationDetails (state, data) {
         state.payPalPaymentConfirmation = data
+      },
+      setPosts (state, data) {
+        state.posts = data
       }
     },
     getters: {
@@ -48,6 +52,9 @@ const store = () => {
       },
       payPalConfirmationDetails: state => {
         return state.payPalPaymentConfirmation
+      },
+      posts: state => {
+        return state.posts
       }
     }
   })

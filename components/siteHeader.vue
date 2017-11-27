@@ -33,9 +33,6 @@
     width: 100%;
     padding: 1.5rem 3.5rem;
     transition: 300ms ease-out;
-    background: rgba(0,0,0,0.2);
-    border-bottom: 0.0625rem solid rgba(255,255,255,0.2);
-    box-shadow: inset 0 -15px 15px -15px rgba(252,205,0,0.2);
     pointer-events: none;
   }
   header.inactive {
@@ -44,6 +41,9 @@
   }
   header.active {
     opacity: 1;
+    background: rgba(0,0,0,0.2);
+    border-bottom: 0.0625rem solid rgba(255,255,255,0.2);
+    box-shadow: inset 0 -15px 15px -15px rgba(252,205,0,0.2);
   }
   header > * {
     pointer-events: auto;
