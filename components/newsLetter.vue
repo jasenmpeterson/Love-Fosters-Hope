@@ -40,10 +40,6 @@ export default {
 		text-align: center;
 	}
 	
-	.btn {
-    box-shadow: 0 0 0.625rem rgba(0,0,0,0.1);
-	}
-	
   .modal {
     background-color: #fff;
     box-shadow: 0 0 0.625rem rgba(0,0,0,0.1);

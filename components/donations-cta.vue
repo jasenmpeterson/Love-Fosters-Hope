@@ -29,7 +29,7 @@ export default {
 	article {
 		border: 4px solid #F5F5F5;
 		background-color: #FFFFFF;
-		box-shadow: 0 0 25px rgba(0,0,0,.16);
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 		max-width: 61.875rem;
 		margin: 0 auto;
 		padding: 2.5rem;

@@ -4,7 +4,7 @@
 			<div class="cell">
 				<div class="wrap">
 					<article v-html="pageData.mentorsData.mentors.content.rendered"></article>
-					<nuxt-link class="btn yellow" :to="pageData.mentorsData.mentors.slug"><span>Learn More</span></nuxt-link>
+					<nuxt-link class="btn" :to="pageData.mentorsData.mentors.slug"><span>Learn More</span></nuxt-link>
 				</div>
       </div>
       <div class="cell mentors__background" v-bind:style="{ backgroundImage: 'url(' + pageData.mentorsData.mentors.better_featured_image.source_url + ')' }"></div>
@@ -61,8 +61,5 @@
 	article >>> p {
     color: #6C6D71;
     line-height: 1.5;
-	}
-	.btn {
-		box-shadow: 0 0 0.9375rem rgba(0,0,0,0.1);
 	}
 </style>

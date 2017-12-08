@@ -13,7 +13,8 @@ module.exports = {
   // add your custom rules here
   rules: {
     'indent': 0,
-    'no-tabs': 0
+    'no-tabs': 0,
+    'no-unused-vars': 0
   },
   globals: {}
 }

@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <div class="content__wrap content__block__three" v-bind:style="{ backgroundImage: 'url(' + pageData.ourMission.better_featured_image.source_url + ')' }">
+    <div class="content__wrap content__block__three" v-if="pageData.ourMission" v-bind:style="{ backgroundImage: 'url(' + pageData.ourMission.better_featured_image.source_url + ')' }">
         <div class="cell">
           <article v-html="pageData.ourMission.acf.our_mission_page_content.content_block_c"></article>
         </div>
@@ -49,7 +49,7 @@
 <script>
 import axios from 'axios'
 import { mapGetters } from 'vuex'
-import donationsCTA from '../../components/donations-cta.vue'
+import donationsCTA from '../components/donations-cta.vue'
 export default {
   async asyncData ({ store, params }) {
     let [ourMission] = await Promise.all([axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/5')])
