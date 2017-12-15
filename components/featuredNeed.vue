@@ -16,78 +16,76 @@
   </div>
 </template>
 <script>
-  import { mapGetters } from 'vuex'
-  import NuxtLink from '../.nuxt/components/nuxt-link'
-  import donateForm from '../components/donateForm.vue'
-  export default {
-    components: {
-      NuxtLink,
-      donateForm
-    },
-    computed: {
-      ...mapGetters({
-        pageData: 'pageData'
-      })
-    }
-  }
+import { mapGetters } from 'vuex';
+import NuxtLink from '../.nuxt/components/nuxt-link';
+import donateForm from '../components/donateForm.vue';
+export default {
+	components: {
+		NuxtLink,
+		donateForm
+	},
+	computed: {
+		...mapGetters({
+			pageData: 'pageData'
+		})
+	}
+};
 </script>
 <style scoped>
+.component__wrap {
+	height: 100vh;
+}
 
-  .component__wrap {
-    height: 100vh;
-  }
+.featured__need__background {
+	background-size: cover !important;
+	background-position: center center !important;
+	height: 100vh;
+}
 
-  .featured__need__background {
-    background-size: cover !important;
-    background-position: center center !important;
-    height: 100vh;
-  }
+.cell {
+	width: 50%;
+}
 
-  .cell {
-    width: 50%;
-  }
+.wrap {
+	padding: 3.5rem;
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+}
 
-  .wrap {
-    padding: 3.5rem;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-  }
+.wrap>>>.cell {
+	width: 100%;
+	position: relative;
+}
 
-  .wrap >>> .cell {
-    width: 100%;
-    position: relative;
-  }
+.wrap>>>p {
+	line-height: 1.5;
+	width: 70%;
+	margin: 0 auto;
+}
 
-  .wrap >>> p {
-    color: #6C6D71;
-    line-height: 1.5;
-  }
+.wrap>>>h2 {
+	font-family: 'MerriWeather';
+	font-weight: 400;
+	font-size: 1.2rem;
+}
 
-  .wrap >>> h2 {
-    font-family: 'MerriWeather';
-    color: #6C6D71;
-    font-weight: 400;
-    font-size: 1.2rem;
-  }
+h1,
+h3 {
+	font-family: 'Lato';
+}
 
-  h1,
-  h3 {
-    font-family: 'Lato'
-  }
+h3 {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
 
-  h3 {
-    font-size: 0.9rem;
-    color: #C2C2C2;
-    text-transform: uppercase;
-    margin-bottom: 0;
-  }
-
-  h1 {
-    color: #FCCD00;
-    font-size: 3rem;
-    font-weight: 900;
-    margin-bottom: 0.5rem;
-  }
+h1 {
+	color: #fccd00;
+	font-size: 3rem;
+	font-weight: 900;
+	margin-bottom: 0.5rem;
+}
 </style>

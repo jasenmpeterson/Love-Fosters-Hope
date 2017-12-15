@@ -16,41 +16,35 @@
 	</div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
 export default {
-		computed: {
-      ...mapGetters({
-        data: 'pageOptions'
-      })
-    }
-}
+	computed: {
+		...mapGetters({
+			data: 'pageOptions'
+		})
+	}
+};
 </script>
 <style scoped>
+article>>>h1 {
+	color: #fccd00;
+}
 
-	article >>> h1 {
-		color: #FCCD00;
-	}
+.form__wrap {
+	margin-top: 2.5rem;
+	text-align: center;
+}
 
-	article >>> p {
-		color: #6C6D71;
-	}
-
-	.form__wrap {
-		margin-top: 2.5rem;
-		text-align: center;
-	}
-	
-  .modal {
-    background-color: #fff;
-    box-shadow: 0 0 0.625rem rgba(0,0,0,0.1);
-    height: 12.5rem;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-	}
-
+.modal {
+	background-color: #fff;
+	box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+	height: 12.5rem;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
 </style>

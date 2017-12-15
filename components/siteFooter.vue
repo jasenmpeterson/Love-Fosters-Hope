@@ -15,49 +15,47 @@
 	</div>
 </template>
 <script>
-import newsLetter from '../components/newsLetter.vue'
+import newsLetter from '../components/newsLetter.vue';
 export default {
 	components: {
 		newsLetter
 	},
-data () {
-    return {
-      currentYear: null
-    }
-  },
+	data() {
+		return {
+			currentYear: null
+		};
+	},
 	methods: {
-		getCurrentYear: function () {
-			this.currentYear = (new Date()).getFullYear()
+		getCurrentYear: function() {
+			this.currentYear = new Date().getFullYear();
 		}
 	},
-	created () {
-		this.getCurrentYear()
+	created() {
+		this.getCurrentYear();
 	}
-}
+};
 </script>
 <style scoped>
+footer {
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	background-color: #fccd00;
+	color: #fff;
+	width: 100%;
+	font-size: 0.8rem;
+	font-weight: 900;
+}
 
-	footer {
-		padding: 1rem;
-		display: flex;
-		justify-content: space-between;
-		background-color: #FCCD00;
-		color: #fff;
-		max-width: 100%;
-		font-size: 0.8rem;
-		font-weight: 900;
-	}
+.cell {
+	width: 50%;
+}
 
-	.cell {
-		width: 50%;
-	}
+.content__wrap {
+	justify-content: center;
+}
 
-	.content__wrap {
-		justify-content: center;
-	}
-
-	.wrap {
-		padding: 3.5rem;
-	}
-
+.wrap {
+	padding: 3.5rem;
+}
 </style>

@@ -118,7 +118,6 @@ export default {
 }
 
 .sub__content__wrap article>>>p {
-	color: #6c6d71;
 	font-family: 'Merriweather';
 }
 

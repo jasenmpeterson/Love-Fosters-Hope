@@ -138,7 +138,7 @@ export default {
 
 .content__block__one {
 	align-items: center;
-	margin-top: 15rem;
+	margin-top: 10rem;
 	margin-bottom: 6rem;
 }
 
@@ -171,14 +171,8 @@ export default {
 	font-weight: 900;
 }
 
-.content__block__one .cell>>>p,
-.content__block__two article>>>p {
-	color: #6c6d71;
-}
-
 .content__block__two article>>>p {
 	font-size: 1.6rem;
-	font-weight: 300;
 }
 
 .content__block__two {
@@ -222,6 +216,10 @@ export default {
 	justify-content: center;
 	color: #fff;
 	margin-top: 8rem;
+}
+
+.content__block__three article>>>p {
+	font-size: 1.5rem;
 }
 
 .content__block__three .cell {

@@ -6,7 +6,7 @@
           <article  class="summer__camps__content" v-html="data.acf.row_one.column_one"></article>
           <div class="cell">
             <div class="camp__description__wrap" v-for="(data, index) in data.acf.row_two.camps" v-bind:key="index">
-              <nuxt-link :to="data.content.post_name">
+              <nuxt-link :to="`/camp/${data.content.post_name}`">
                 <article>
                   <div class="article__wrap">
                     <h1>{{data.content.post_title}}</h1>
@@ -99,7 +99,6 @@ export default {
 	width: 50%;
 	margin: 0 auto;
 	text-align: center;
-	color: #6c6d71;
 }
 
 .row__two .content__wrap article>>>h1 {
@@ -108,7 +107,6 @@ export default {
 }
 
 .summer__camps__content {
-	color: #6c6d71;
 	width: 50%;
 	margin: 0 auto 10rem auto;
 	padding-left: 2rem;
@@ -118,12 +116,8 @@ export default {
 .summer__camps__content>>>h1 {
 	font-weight: 900;
 	font-size: 3.75rem;
-	color: #f35d54;
+	color: #fccd00;
 	line-height: 4.0625rem;
-}
-
-.summer__camps__content>>>p {
-	color: #6c6d71;
 }
 
 .row__two .content__wrap article>>>p a {
@@ -176,7 +170,7 @@ export default {
 
 .row__three .cell>>>h1 {
 	width: 73.75rem;
-	color: #f05449;
+	color: #fccd00;
 	font-size: 3rem;
 	line-height: 1.2;
 	text-align: center;

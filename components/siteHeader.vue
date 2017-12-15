@@ -45,6 +45,7 @@ header {
 	display: inline-block;
 	background: #f35d54;
 	padding: 0 3.5rem;
+	opacity: 0;
 }
 
 .cell.hamburger__menu {

@@ -12,54 +12,53 @@
 	</div>
 </template>
 <script>
-  import { mapGetters } from 'vuex'
-  import NuxtLink from '../.nuxt/components/nuxt-link'
-	export default {
-		components: {
-      NuxtLink
-    },
-    computed: {
-      ...mapGetters({
-        pageData: 'pageData'
-      })
-    }
+import { mapGetters } from 'vuex';
+import NuxtLink from '../.nuxt/components/nuxt-link';
+export default {
+	components: {
+		NuxtLink
+	},
+	computed: {
+		...mapGetters({
+			pageData: 'pageData'
+		})
 	}
+};
 </script>
 <style scoped>
-	.component__wrap {
-    height: 100vh;
-  }
+.component__wrap {
+	height: 100vh;
+}
 
-  .mentors__background {
-    background-size: cover !important;
-    background-position: center center !important;
-    height: 100vh;
-    box-shadow: inset 0 -15px 15px -15px rgba(0,0,0,.5);
-    border-bottom: 1px solid rgba(255,255,255,1);
-    border-left: 1px solid #FFFDFD;
-  }
+.mentors__background {
+	background-size: cover !important;
+	background-position: center center !important;
+	height: 100vh;
+	box-shadow: inset 0 -15px 15px -15px rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid rgba(255, 255, 255, 1);
+	border-left: 1px solid #fffdfd;
+}
 
-  .cell {
-    width: 50%;
-  }
+.cell {
+	width: 50%;
+}
 
-	.wrap {
-		padding: 3.5rem;
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		justify-content: center;
-	}
+.wrap {
+	padding: 3.5rem;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+}
 
-	article >>> h1 {
-    color: #f35d54;
-    font-size: 2rem;
-    font-weight: 900;
-    margin-bottom: 0.5rem;
-  }
+article>>>h1 {
+	color: #f35d54;
+	font-size: 2rem;
+	font-weight: 900;
+	margin-bottom: 0.5rem;
+}
 
-	article >>> p {
-    color: #6C6D71;
-    line-height: 1.5;
-	}
+article>>>p {
+	line-height: 1.5;
+}
 </style>
