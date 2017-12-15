@@ -1,3 +1,4 @@
+// TODO: Update Menu button to toggle menu open/close.
 if (process.browser) {
   // TODO - I can probably minimize a lot of this code.
   let container = document.querySelector('.push__menu__container')

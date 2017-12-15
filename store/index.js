@@ -1,6 +1,5 @@
 import Vuex from 'vuex'
 import axios from 'axios'
-
 const store = () => {
   return new Vuex.Store({
     state: {
@@ -8,13 +7,14 @@ const store = () => {
       siteNavigation: null,
       pageOptions: null,
       posts: null,
-      payPalPaymentConfirmation: null
+      payPalPaymentConfirmation: null,
+      wordpressAPI: 'http://lovefostershope.gearhostpreview.com/index.php/wp-json'
     },
     actions: {
-      async nuxtServerInit ({ commit }) {
+      async nuxtServerInit ({ commit, state }) {
         return axios.all([
-          axios.get('http://localhost.lovefostershope:9999/wp-json/wp-api-menus/v2/menus/5'),
-          axios.get('http://localhost.lovefostershope:9999/wp-json/acf/v3/options/options')
+          axios.get(`${state.wordpressAPI}/wp-api-menus/v2/menus/5`),
+          axios.get(`${state.wordpressAPI}/acf/v3/options/options`)
         ]).then(axios.spread(function (navigation, pageOptions) {
           const navigationData = [navigation.data.items]
           commit('setSiteNavigation', navigationData)

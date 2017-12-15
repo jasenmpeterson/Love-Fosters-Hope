@@ -13,83 +13,88 @@
   </header>
 </template>
 <script>
-  import NuxtLink from '../.nuxt/components/nuxt-link'
-  export default {
-    components: {
-      NuxtLink
-    }
-  }
+import NuxtLink from '../.nuxt/components/nuxt-link';
+export default {
+	components: {
+		NuxtLink
+	}
+};
 </script>
 <style scoped>
-  header {
-    display: flex;
-    justify-content:  space-between;
-    align-items: center;
-    grid-column: col-left-start/col-main-end;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 20;
-    width: 100%;
-    padding: 1.5rem 3.5rem;
-    transition: 300ms ease-out;
-    pointer-events: none;
-  }
-  header.inactive {
-    opacity: 0;
-    z-index: -1;
-  }
-  header.active {
-    opacity: 1;
-    background: rgba(0,0,0,0.2);
-    border-bottom: 0.0625rem solid rgba(255,255,255,0.2);
-    box-shadow: inset 0 -15px 15px -15px rgba(252,205,0,0.2);
-  }
-  header > * {
-    pointer-events: auto;
-  }
-  .cell.logo__container {
-    width: 120px;
-  }
-  .cell.hamburger__menu {
-    width: 35px;
-    height: 25px;
-    cursor: pointer;
-  }
-  .cell.hamburger__menu,
-  .menu__button {
-    height: 25px;
-  }
-  .menu__button {
-    position: relative;
-  }
-  .menu__button__inner,
-  .menu__button__inner:before,
-  .menu__button__inner:after {
-    background-color: #E3B901;
-    position: absolute;
-    width: 35px;
-    height: 4px;
-    border-radius: 4px;
-    transition: 300ms ease-out;
-  }
-  .menu__button:hover .menu__button__inner,
-  .menu__button:hover   .menu__button__inner:before,
-  .menu__button:hover   .menu__button__inner:after {
-    background-color: #F35D54;
-  }
-  .menu__button__inner:before,
-  .menu__button__inner:after {
-    content: '';
-    display: block;
-  }
-  .menu__button__inner:before {
-    top: 10px;
-  }
-  .menu__button__inner:after {
-    top: 20px;
-  }
-  img {
-    width: 5.625rem;
-  }
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	grid-column: col-left-start/col-main-end;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	width: 100%;
+	transition: 300ms ease-out;
+	background: #ffffff;
+	line-height: 0;
+	box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15), 0 3px 12px rgba(0, 0, 0, 0.16);
+}
+
+.cell.logo__container {
+	width: 30%;
+}
+
+.cell.logo__container a {
+	display: inline-block;
+	background: #f35d54;
+	padding: 0 3.5rem;
+}
+
+.cell.hamburger__menu {
+	width: 35px;
+	height: 25px;
+	cursor: pointer;
+}
+
+.cell.hamburger__menu,
+.menu__button {
+	height: 25px;
+}
+
+.menu__button {
+	position: relative;
+	right: 2rem;
+}
+
+.menu__button__inner,
+.menu__button__inner:before,
+.menu__button__inner:after {
+	background-color: #e3b901;
+	position: absolute;
+	width: 35px;
+	height: 4px;
+	border-radius: 4px;
+	transition: 300ms ease-out;
+}
+
+.menu__button:hover .menu__button__inner,
+.menu__button:hover .menu__button__inner:before,
+.menu__button:hover .menu__button__inner:after {
+	background-color: #f35d54;
+}
+
+.menu__button__inner:before,
+.menu__button__inner:after {
+	content: '';
+	display: block;
+}
+
+.menu__button__inner:before {
+	top: 10px;
+}
+
+.menu__button__inner:after {
+	top: 20px;
+}
+
+img {
+	width: 7.625rem;
+}
 </style>

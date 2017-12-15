@@ -1,7 +1,6 @@
 <template>			
   <div class="wrap">
     <div class="component__wrap header__wrap">
-			<div class="background__image tint" v-if="pageData.better_featured_image" v-bind:style="{ backgroundImage: 'url(' + pageData.better_featured_image.source_url + ')' }"></div>
       <div class="content__wrap">
 				<div class="cell">
 					<div class="title__wrap" v-if="pageData.title">
@@ -29,135 +28,106 @@
 				</div>
       </div>
 		</div>
-		<div class="content__wrap donate__wrap">
-      <div class="cell">
-        <donationsCTA/>
-      </div>
-    </div>
   </div>
 </template>
 <script>
-import axios from 'axios'
-import { mapGetters } from 'vuex'
-import donationsCTA from '../components/donations-cta.vue'
-import postList from '../components/postList.vue'
+import axios from 'axios';
+import { mapGetters } from 'vuex';
+import postList from '../components/postList.vue';
 
 export default {
-  async asyncData ({ store, params }) {
-    let [neededNow, neededNowPosts] = await Promise.all([
-			axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/16'),
-			axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/needed_now')
-		])
-    const neededNowData = {
+	async asyncData({ store, params }) {
+		let [neededNow, neededNowPosts] = await Promise.all([
+			axios.get(`${store.state.wordpressAPI}/wp/v2/pages/16`),
+			axios.get(`${store.state.wordpressAPI}/wp/v2/needed_now`)
+		]);
+		const neededNowData = {
 			neededNow: neededNow.data,
 			neededNowPost: neededNowPosts.data
-		}
-		const pageData = neededNowData.neededNow
-		store.commit('setPageData', pageData)
-		const postsData = neededNowData.neededNowPost
-		store.commit('setPosts', postsData)
-  },
-  head () {
-    return {
-      title: 'Love Fosters Hope — Needed Now',
-      meta: [
-        {
-          name: 'description',
-          content: 'This is the meta description of the content.'
-        }
-      ]
-    }
-  },
-  data () {
-    return {
-      title: 'default'
-    }
-  },
-  computed: {
-  ...mapGetters({
-    pageData: 'pageData'
-  })
-  },
-  components: {
-		donationsCTA,
+		};
+		const pageData = neededNowData.neededNow;
+		store.commit('setPageData', pageData);
+		const postsData = neededNowData.neededNowPost;
+		store.commit('setPosts', postsData);
+	},
+	head() {
+		return {
+			title: 'Love Fosters Hope — Needed Now',
+			meta: [
+				{
+					name: 'description',
+					content: 'This is the meta description of the content.'
+				}
+			]
+		};
+	},
+	data() {
+		return {
+			title: 'default'
+		};
+	},
+	computed: {
+		...mapGetters({
+			pageData: 'pageData'
+		})
+	},
+	components: {
 		postList
-  }
-}
+	}
+};
 </script>
 <style scoped>
+.post__wrap {
+	margin-top: 2rem;
+	margin-bottom: 6rem;
+}
 
-	.cell {
-		position: relative;
-	}
+.cell {
+	position: relative;
+}
 
-	.background__image {
-		background-size: 100% !important;
-		width: 100%;
-		height: 100vh;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
+.header__wrap {
+	background-size: cover !important;
+	background-position: center center;
+	position: relative;
+	color: #fff;
+	margin-top: 15rem;
+}
 
-	.header__wrap {
-		background-size: cover !important;
-		background-position: center center;
-		position: relative;
-		color: #fff;
-		padding-top: 15.5rem;
-	}
+.header__wrap .content__wrap,
+.sub__content__wrap .content__wrap {
+	justify-content: center;
+	position: relative;
+	z-index: 2;
+}
 
-	.header__wrap .content__wrap,
-	.sub__content__wrap .content__wrap {
-		justify-content: center;
-		position: relative;
-		z-index: 2;
-	}
+.header__wrap .content__wrap .cell,
+.sub__content__wrap .content__wrap .cell {
+	max-width: 61.875rem;
+	align-self: center;
+}
 
-	.header__wrap .content__wrap .cell,
-	.sub__content__wrap .content__wrap .cell {
-		max-width: 61.875rem;
-		align-self: center;
-	}
-	
-	.header__wrap article >>> h1 {
-		color: #FCCD00;
-		font-weight: 400;
-		font-size: 2.5rem;
-	}
+.header__wrap article>>>h1 {
+	color: #fccd00;
+	font-weight: 400;
+	font-size: 2.5rem;
+}
 
-	.sub__content__wrap {
-		margin: 14.5rem 0 10.5rem 0;
-	}
+.sub__content__wrap {
+	padding-bottom: 6rem;
+}
 
-	.sub__content__wrap article >>> p {
-		color: #6C6D71;
-		font-family: 'Merriweather'
-	}
+.sub__content__wrap article>>>p {
+	color: #6c6d71;
+	font-family: 'Merriweather';
+}
 
-	.sub__content__wrap .cell:after {
-    display: block;
-    content: url(/static/icons/hearts_big_small.svg);
-    width: 5rem;
-    position: absolute;
-    right: 0;
-    top: -5rem;
-  }
-
-	.donate__wrap {
-		margin: 12rem 0 6rem 0;
-	}
-
-	.tint:before {
-		background-color: rgba(0,0,0,.8);
-	}
-
-	.title__wrap h1 {
-		color: #fff;
-	}
-
-	.title__wrap span {
-		background-color: #fff;
-	}
-
+.sub__content__wrap .cell:after {
+	display: block;
+	content: url(/static/icons/hearts_big_small.svg);
+	width: 5rem;
+	position: absolute;
+	right: 0;
+	top: -5rem;
+}
 </style>

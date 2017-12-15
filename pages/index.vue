@@ -20,11 +20,11 @@
     // retrieve data and commit it so that page components can access via the store.
     async asyncData ({ store, params }) {
       let [ourMission, ourCamps, featuredNeed, mentors, latestPosts] = await Promise.all([
-        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/5'),
-        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/9'),
-        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/needed_now'),
-        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/pages/7'),
-        axios.get('http://localhost.lovefostershope:9999/wp-json/wp/v2/posts')
+        axios.get(`${store.state.wordpressAPI}/wp/v2/pages/5`),
+        axios.get(`${store.state.wordpressAPI}/wp/v2/pages/9`),
+        axios.get(`${store.state.wordpressAPI}/wp/v2/needed_now`),
+        axios.get(`${store.state.wordpressAPI}/wp/v2/pages/7`),
+        axios.get(`${store.state.wordpressAPI}/wp/v2/posts`)
       ])
       // our mission
       const missionData = {
