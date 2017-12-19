@@ -9,22 +9,6 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('./assets/css'));
 });
 
-gulp.task('lint-css', function lintCssTask() {
-	const gulpStylelint = require('gulp-stylelint');
-
-	return gulp.src('src/**/*.css').pipe(
-		gulpStylelint({
-			reporters: [{ formatter: 'string', console: true }]
-		})
-	);
-});
-
-gulp.task('watch', function() {
+gulp.task('default', function() {
 	gulp.watch('./assets/scss/**/*.scss', ['sass']);
-});
-
-gulp.task('default', ['sass', 'watch', 'lint-css'], function() {
-	gulp.start('sass');
-	gulp.start('watch');
-	gulp.start('lint-css');
 });

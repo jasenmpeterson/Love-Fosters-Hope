@@ -1,5 +1,5 @@
 <template>
-	<div class="component__wrap tint" v-if="pageData.latestPostsData" v-bind:style="{ backgroundImage: 'url(' + pageData.latestPostsData.latestPosts[0].better_featured_image.source_url + ')' }">
+	<div class="component__wrap" v-if="pageData.latestPostsData">
 		<div class="content__wrap">
 			<div class="cell">
 				<article v-for="(item, index) in pageData.latestPostsData.latestPosts.slice(0,1)" v-bind:key="index">
@@ -16,77 +16,70 @@
 	</div>
 </template>
 <script>
-  import { mapGetters } from 'vuex'
-	import moment from 'moment'
-  import NuxtLink from '../.nuxt/components/nuxt-link'
-	export default {
-    components: {
-      NuxtLink
-    },
-    computed: {
-      ...mapGetters({
-        pageData: 'pageData'
-      })
-    },
-    filters: {
-      truncate: function (string, value) {
-        return string.substring(0, value) + '...'
-      },
-      setDate: function (date) {
-        return moment(date).format('MMMM DD, YYYY')
-      }
-    }
+import { mapGetters } from 'vuex';
+import moment from 'moment';
+import NuxtLink from '../.nuxt/components/nuxt-link';
+export default {
+	components: {
+		NuxtLink
+	},
+	computed: {
+		...mapGetters({
+			pageData: 'pageData'
+		})
+	},
+	filters: {
+		truncate: function(string, value) {
+			return string.substring(0, value) + '...';
+		},
+		setDate: function(date) {
+			return moment(date).format('MMMM DD, YYYY');
+		}
 	}
+};
 </script>
 <style scoped>
+.component__wrap {
+	height: 100vh;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-	.component__wrap {
-		height: 100vh;
-		box-shadow: inset 0 -15px 15px -15px rgba(0,0,0,1);
-		border-bottom: 1px solid rgba(255,255,255,.2);
-		background-size: cover !important;
-	}
+.content__wrap {
+	height: 100%;
+}
 
-	.content__wrap {
-		height: 100%;
-	}
+.content__wrap .cell article {
+	height: 100%;
+}
 
-	.content__wrap .cell article {
-		height: 100%;
-	}
+article {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	color: #ffffff;
+}
 
-	article {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		color: #ffffff;
-	}
+article .wrap {
+	max-width: 61.875rem;
+	margin: 0 auto;
+	align-self: center;
+}
 
-	article .wrap {
-		max-width: 61.875rem;
-		margin: 0 auto;
-		align-self: center;
-	}
+.post__date {
+	font-size: 0.8rem;
+	font-family: 'Merriweather';
+	display: block;
+	margin-bottom: 1rem;
+}
 
-	.post__date {
-		font-size: 0.8rem;
-		font-family: 'Merriweather';
-		display: block;
-		margin-bottom: 1rem;
-	}
+h4 {
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin-bottom: 1.2rem;
+	color: #fccd00;
+}
 
-	h4 {
-		font-size: 1rem;
-		text-transform: uppercase;
-		margin-bottom: 1.2rem;
-		color: #FCCD00;
-	}
-
-	.tint::before {
-		background: rgba(243,93,84,0.8);
-	}
-
-	.btn {
-		box-shadow: 0 0 .9375rem rgba(0,0,0,.1);
-	}
+.btn {
+	box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.1);
+}
 </style>

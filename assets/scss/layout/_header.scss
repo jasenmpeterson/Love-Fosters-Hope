@@ -1,3 +1,78 @@
 header {
-  grid-column: col-left-start / col-main-end;
+	display: flex;
+	position: relative;
+	z-index: 200;
+	align-items: center;
+	background: #ffffff;
+	box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.15), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+	border-top: 2px solid #fccd00;
+}
+
+header .cell.logo__container {
+	width: 15.5rem;
+}
+
+header .cell.nav__container {
+	width: 80%;
+}
+
+header .cell.logo__container a {
+	display: inline-block;
+	padding: 2.5rem;
+	background: #f35d54;
+	text-decoration: none;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+header .cell.hamburger__menu {
+	width: 35px;
+	height: 25px;
+	cursor: pointer;
+}
+
+header .cell.hamburger__menu,
+header .menu__button {
+	height: 25px;
+}
+
+header .menu__button {
+	position: relative;
+	right: 2rem;
+}
+
+header .menu__button__inner,
+header .menu__button__inner:before,
+header .menu__button__inner:after {
+	background-color: #fccd00;
+	position: absolute;
+	width: 35px;
+	height: 4px;
+	border-radius: 4px;
+	transition: 600ms ease-in-out;
+}
+
+header .menu__button:hover .menu__button__inner,
+header .menu__button:hover .menu__button__inner:before,
+header .menu__button:hover .menu__button__inner:after {
+	opacity: 0.5;
+}
+
+header .menu__button__inner:before,
+header .menu__button__inner:after {
+	content: '';
+	display: block;
+}
+
+header .menu__button__inner:before {
+	top: 10px;
+}
+
+header .menu__button__inner:after {
+	top: 20px;
+}
+
+header img {
+	width: 12rem;
 }

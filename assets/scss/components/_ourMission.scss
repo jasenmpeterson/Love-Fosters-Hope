@@ -1,0 +1,23 @@
+.statistic__wrap {
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.statistic__wrap.material__wrap {
+	padding: 2rem;
+	background-image: linear-gradient(147deg, #fbfbfb 0%, #ffffff 100%);
+}
+
+.statistic__wrap h1 {
+	font-family: 'Lato';
+	font-size: 5.5rem;
+	color: #f35d54;
+	letter-spacing: -5px;
+}
+
+.our__mission__wrap p strong {
+	font-weight: 900;
+	color: #f35d54;
+}

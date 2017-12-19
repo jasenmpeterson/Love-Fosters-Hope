@@ -1,15 +1,195 @@
-.section__wrap {
-  display: flex;
+.component__wrap {
+	position: relative;
 }
 
 .content__wrap {
-  display: flex;
-  flex-flow: row wrap;
+	display: flex;
+	width: 100%;
+}
+
+.--center {
+	justify-content: center;
+}
+
+.--center__vertical {
+	align-items: center;
+}
+
+.--columns {
+	flex-direction: column;
+}
+
+.--space__between {
+	justify-content: space-between;
+}
+
+.--self__stretch {
+	align-self: stretch;
+}
+
+.--flex__end {
+	justify-content: flex-end;
+}
+
+.flex {
+	display: flex;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+}
+
+.material__wrap {
+	box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
+	border-radius: 4px;
+	background: #ffffff;
+	padding: 5.5rem 6rem;
+	position: relative;
+}
+
+.material__wrap.--medium {
+	padding: 2.5rem 3rem;
+}
+
+.material__wrap.--small {
+	padding: 1.5rem 2rem;
+}
+
+.material__wrap.--carousel {
+	padding: 1.5rem 2rem;
+}
+
+.material__wrap.--heart__emblem {
+	padding: 6rem;
+}
+
+.material__wrap.--sharp__corners {
+	border-radius: 0;
+}
+
+.material__wrap.--no__shadow {
+	box-shadow: none;
+}
+
+.balloon__man__svg {
+	width: 5rem;
+	height: 5rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -5rem;
+	margin: auto;
+}
+
+.balloon__man__svg {
+	.cls-1 {
+		fill: #ffffff;
+	}
+
+	.cls-2 {
+		fill: #f15f57;
+	}
+
+	.cls-3 {
+		fill: #fff;
+		stroke: #fff;
+		stroke-miterlimit: 10;
+		stroke-width: 3.31px;
+	}
+}
+
+.balloon__man__svg svg {
+	width: 100%;
+	height: 100%;
+}
+
+.heart__emblem {
+	position: absolute;
+	top: -5rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 10.5rem;
+	height: auto;
 }
 
 .cell {
-  flex: 0 0 auto;
-  min-height: 0px;
-  min-width: 0px;
-  width: 100%;
+	width: 100%;
+}
+
+.cell__25 {
+	width: 25%;
+}
+
+.cell__30 {
+	width: 30%;
+}
+
+.cell__40 {
+	width: 40%;
+}
+
+.cell__50 {
+	width: 50%;
+}
+
+.cell__75 {
+	width: 75%;
+}
+
+.padding__left__5 {
+	padding-left: 5rem;
+}
+
+.padding__right__5 {
+	padding-right: 5rem;
+}
+
+.padding__10 {
+	padding: 10rem;
+}
+
+.padding__left__10 {
+	padding-left: 10rem;
+}
+
+.padding__right__10 {
+	padding-right: 10rem;
+}
+
+.padding__top__10 {
+	padding-top: 10rem;
+}
+
+.padding__bottom__10 {
+	padding-bottom: 10rem;
+}
+
+.margin__bottom__10 {
+	margin-bottom: 10rem;
+}
+
+.margin__top__5 {
+	margin-top: 5rem;
+}
+
+.margin__bottom__5 {
+	margin-bottom: 5rem;
+}
+
+.margin__top__10 {
+	margin-top: 10rem;
+}
+
+.margin__bottom__20 {
+	margin-bottom: 20rem;
+}
+
+.margin__top__20 {
+	margin-top: 20rem;
+}
+
+.background__yellow {
+	background-color: #fccd00;
 }

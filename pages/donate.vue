@@ -1,8 +1,11 @@
 <template>
-  <div class="component__wrap">
-	  <h1 v-html="pageData.donate.title.rendered"></h1>
-      <article v-html="pageData.donate.content.rendered"></article>
-      <donateForm/>
+  <div class="component__wrap padding__top__10">
+	  <div class="content__wrap --center">
+		<div class="cell cell__75">
+			<article class="header__yellow paragraph__white paragraph__bold" v-html="pageData.donate.content.rendered"></article>
+			<donateForm/>
+		</div>		  
+	  </div>
   </div>
 </template>
 <script>
@@ -44,15 +47,3 @@ export default {
 	}
 };
 </script>
-<style>
-.component__wrap {
-	margin: 12rem 0;
-	width: 65%;
-	margin: 12rem auto;
-}
-
-.component__wrap > h1 {
-	font-size: 3rem;
-	color: #fccd00;
-}
-</style>
