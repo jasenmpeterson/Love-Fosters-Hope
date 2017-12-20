@@ -4,12 +4,12 @@
 			<div class="cell">
 				<article v-for="(item, index) in pageData.latestPostsData.latestPosts.slice(0,1)" v-bind:key="index">
 					<div class="wrap">
-							<h4>Latest News</h4>
-							<h2>{{item.title.rendered}}</h2>
-							<span class="post__date">{{ item.date | setDate }}</span>
-							<div class="post__excerpt" v-html="$options.filters.truncate(item.content.rendered, '500')"></div>
-							<nuxt-link class="btn yellow" :to="item.slug"><span>Read More</span></nuxt-link>
-						</div>
+						<h4>Latest News</h4>
+						<h2>{{item.title.rendered}}</h2>
+						<span class="post__date">{{ item.date | setDate }}</span>
+						<div class="post__excerpt" v-html="$options.filters.truncate(item.content.rendered, '500')"></div>
+						<nuxt-link class="btn yellow" :to="item.slug"><span>Read More</span></nuxt-link>
+					</div>
 				</article>
 			</div>
 		</div>

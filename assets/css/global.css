@@ -613,7 +613,7 @@ a {
   height: 100%; }
 
 .hearts__list ul {
-  padding-left: 0.5rem; }
+  padding-left: 1.5rem; }
 
 .hearts__list li {
   position: relative;
@@ -788,7 +788,8 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  cursor: pointer; }
+  cursor: pointer;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.05); }
 
 .btn:last-child {
   margin-top: 2.5rem; }
@@ -813,7 +814,8 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  cursor: pointer; }
+  cursor: pointer;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.05); }
 
 .btn:last-child {
   margin-top: 2.5rem; }
@@ -1104,6 +1106,12 @@ input:not(last-child) {
 
 .margin__top__20 {
   margin-top: 20rem; }
+
+.margin__left__5 {
+  margin-left: 5rem; }
+
+.margin__right__5 {
+  margin-right: 5rem; }
 
 .background__yellow {
   background-color: #fccd00; }
