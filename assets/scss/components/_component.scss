@@ -48,6 +48,14 @@
 	position: relative;
 }
 
+.material__wrap.--extra__large {
+	padding: 4.5rem 5rem;
+	min-height: 25rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .material__wrap.--medium {
 	padding: 2.5rem 3rem;
 }
@@ -166,6 +174,10 @@
 	padding-bottom: 10rem;
 }
 
+.margin__0 {
+	margin: 0;
+}
+
 .margin__bottom__10 {
 	margin-bottom: 10rem;
 }
@@ -200,4 +212,32 @@
 
 .background__yellow {
 	background-color: #fccd00;
+}
+
+.component__wrap {
+	width: 100%;
+	position: relative;
+}
+
+.component__wrap.line:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 1px;
+	height: 100%;
+	opacity: 0.2;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.component__wrap.line:after {
+	content: url(~/static/icons/man.svg);
+	position: absolute;
+	left: -0.3rem;
+	right: 0;
+	bottom: -2rem;
+	margin: auto;
+	width: 2rem;
+	height: auto;
 }

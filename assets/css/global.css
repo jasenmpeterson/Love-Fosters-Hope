@@ -602,6 +602,12 @@ p:not(:last-child) {
 .header__yellow h1 {
   color: #fccd00; }
 
+.header__pink {
+  color: #f35d54; }
+
+.text__uppercase {
+  text-transform: uppercase; }
+
 .text__align__center {
   text-align: center; }
 
@@ -770,9 +776,6 @@ body {
 
 .push__menu__container.open {
   transform: translate3d(-300px, 0, 0); }
-
-.component__wrap {
-  width: 100%; }
 
 .btn {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05), 0 3px 12px rgba(0, 0, 0, 0.05);
@@ -998,6 +1001,13 @@ input:not(last-child) {
   padding: 5.5rem 6rem;
   position: relative; }
 
+.material__wrap.--extra__large {
+  padding: 4.5rem 5rem;
+  min-height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 .material__wrap.--medium {
   padding: 2.5rem 3rem; }
 
@@ -1089,6 +1099,9 @@ input:not(last-child) {
 .padding__bottom__10 {
   padding-bottom: 10rem; }
 
+.margin__0 {
+  margin: 0; }
+
 .margin__bottom__10 {
   margin-bottom: 10rem; }
 
@@ -1115,6 +1128,31 @@ input:not(last-child) {
 
 .background__yellow {
   background-color: #fccd00; }
+
+.component__wrap {
+  width: 100%;
+  position: relative; }
+
+.component__wrap.line:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1px;
+  height: 100%;
+  opacity: 0.2;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, white 100%); }
+
+.component__wrap.line:after {
+  content: url(~/static/icons/man.svg);
+  position: absolute;
+  left: -0.3rem;
+  right: 0;
+  bottom: -2rem;
+  margin: auto;
+  width: 2rem;
+  height: auto; }
 
 .statistic__wrap {
   text-align: center;

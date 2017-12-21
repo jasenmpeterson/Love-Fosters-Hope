@@ -1,40 +1,23 @@
 <template>
-  <div class="component__wrap" v-if="pageData.campData">
-	  <div class="row margin__top__10 margin__bottom__5">
-		<div class="content__wrap" v-for="(data, index) in pageData.campData" v-bind:key="index">
-			<div class="cell cell__75">
-				<div class="material__wrap --small --sharp__corners date__wrapper">
-					<span>{{data.acf.bridge_page_content.date_information.start_date}} - {{data.acf.bridge_page_content.date_information.end_date}} </span>
-				</div>
-			</div>
-		</div>		  
-	  </div>	  
-	  <div class="row">
-		<div class="content__wrap" v-for="(data, index) in pageData.campData" v-bind:key="index">
+  <div class="component__wrap line" v-if="pageData.campData">  
+	<div class="row margin__top__10">
+		<div class="content__wrap --center margin__bottom__10" v-for="(data, index) in pageData.campData" v-bind:key="index">
 			<div class="cell cell__50">
-				<div class="material__wrap --medium --sharp__corners header__yellow hearts__list">
+				<div class="material__wrap text__align__center --extra__large --sharp__corners header__yellow hearts__list">
+					<h3 class="header__pink text__uppercase">{{data.acf.bridge_page_content.date_information.start_date}} - {{data.acf.bridge_page_content.date_information.end_date}} </h3>
 					<h1>{{data.title.rendered}}</h1>
 					<article v-html="data.content.rendered"></article>
 				</div>
 			</div>
+		</div>		  
+	</div>
+	<div class="row margin__bottom__10">
+		<div class="content__wrap --flex__end" v-for="(data, index) in pageData.campData" v-bind:key="index">
 			<div class="cell cell__50">
 				<article class="header__yellow paragraph__white paragraph__bold padding__left__5 padding__right__5" v-html="data.acf.bridge_page_content.content_block"></article>
 			</div>
 		</div>		  
-	</div>	 
-	<div class="row margin__bottom__10">
-		<no-ssr>
-			<carousel :perPage="2">
-				<slide v-for="(data, index) in pageData.campsData.campsData" v-bind:key="index">
-					<div class="material__wrap --medium height__100 flex --center --columns header__yellow">
-						<h1>{{data.title.rendered}}</h1>
-						<article v-html="$options.filters.truncate(data.content.rendered, '300')"></article>
-						<nuxt-link :to="`/camps/${data.slug}`" class="btn --yellow">Learn More</nuxt-link>
-					</div>
-				</slide>
-			</carousel>
-		</no-ssr>
-	</div>
+	</div>	 		 
 	<div class="row margin__bottom__5">
 		<div class="content__wrap" v-for="(data, index) in pageData.campData" v-bind:key="index">
 			<div class="cell cell__50">
@@ -78,6 +61,19 @@
 			</div>
 		</div>
 	</div>
+	<div class="row margin__bottom__10">
+		<no-ssr>
+			<carousel :perPage="2">
+				<slide v-for="(data, index) in pageData.campsData.campsData" v-bind:key="index">
+					<div class="material__wrap --medium height__100 flex --center --columns header__yellow">
+						<h1>{{data.title.rendered}}</h1>
+						<article v-html="$options.filters.truncate(data.content.rendered, '300')"></article>
+						<nuxt-link :to="`/camps/${data.slug}`" class="btn --yellow">Learn More</nuxt-link>
+					</div>
+				</slide>
+			</carousel>
+		</no-ssr>
+	</div>	
   </div>
 </template>
 <script>
