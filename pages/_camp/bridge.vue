@@ -13,42 +13,42 @@
 	</div>
 	<div class="row margin__bottom__10">
 		<div class="content__wrap --flex__end" v-for="(data, index) in pageData.campData" v-bind:key="index">
-			<div class="cell cell__50">
+			<div class="cell cell__50 hearts triple__hearts">
 				<article class="header__yellow paragraph__white paragraph__bold padding__left__5 padding__right__5" v-html="data.acf.bridge_page_content.content_block"></article>
 			</div>
 		</div>		  
 	</div>	 		 
 	<div class="row margin__bottom__5">
 		<div class="content__wrap" v-for="(data, index) in pageData.campData" v-bind:key="index">
-			<div class="cell cell__50">
+			<div class="cell cell__50 hearts big__and__small__hearts">
 				<article class="header__yellow paragraph__white paragraph__bold padding__left__5 padding__right__5" v-html="data.acf.bridge_page_content.content_block_b"></article>
 			</div>
 		</div>
 	</div>
 	<div class="row margin__bottom__10">
 		<div class="content__wrap --flex__end" v-for="(data, index) in pageData.campData" v-bind:key="index">
-			<div class="cell cell__50">
+			<div class="cell cell__50 hearts heart">
 				<article class="header__yellow paragraph__white paragraph__bold padding__left__5 padding__right__5" v-html="data.acf.bridge_page_content.content_block_c"></article>
 			</div>
 		</div>
 	</div> 
  	<div class="row margin__bottom__10">
 		<div class="content__wrap" v-for="(data, index) in pageData.campData" v-bind:key="index">
-			<div class="cell cell__50">
+			<div class="cell cell__50 hearts heart__emblem__background">
 				<article class="header__yellow paragraph__white paragraph__bold padding__left__5 padding__right__5" v-html="data.acf.bridge_page_content.content_block_e"></article>
 			</div>
 		</div>
 	</div>
  	<div class="row margin__bottom__10">
 		<div class="content__wrap  --flex__end" v-for="(data, index) in pageData.campData" v-bind:key="index">
-			<div class="cell cell__50">
+			<div class="cell cell__50 hearts triple__hearts">
 				<article class="header__yellow paragraph__white paragraph__bold padding__left__5 padding__right__5" v-html="data.acf.bridge_page_content.content_block_f"></article>
 			</div>
 		</div>
 	</div>
 	<div class="row margin__bottom__10">
 		<div class="content__wrap" v-for="(data, index) in pageData.campData" v-bind:key="index">
-			<div class="cell cell__50">
+			<div class="cell cell__50 hearts big__and__small__hearts">
 				<article class="header__yellow paragraph__white paragraph__bold padding__left__5 padding__right__5" v-html="data.acf.bridge_page_content.content_block_g"></article>
 			</div>
 		</div>

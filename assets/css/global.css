@@ -1154,6 +1154,41 @@ input:not(last-child) {
   width: 2rem;
   height: auto; }
 
+.hearts {
+  position: relative; }
+
+.triple__hearts:after {
+  display: block;
+  content: url(~/static/icons/hearts__triple.svg);
+  width: 3rem;
+  position: absolute;
+  top: -5rem;
+  right: 10rem; }
+
+.big__and__small__hearts:after {
+  display: block;
+  content: url(~/static/icons/hearts_big_small.svg);
+  width: 3rem;
+  position: absolute;
+  top: -5rem;
+  right: 10rem; }
+
+.heart:after {
+  display: block;
+  content: url(~/static/icons/mbri-hearth-bold.svg);
+  width: 1.5rem;
+  position: absolute;
+  top: -5rem;
+  right: 10rem; }
+
+.heart__emblem__background:after {
+  display: block;
+  content: url(~/static/icons/heart_emblem.svg);
+  width: 6rem;
+  position: absolute;
+  top: -5rem;
+  right: 5rem; }
+
 .statistic__wrap {
   text-align: center;
   width: 80%;
