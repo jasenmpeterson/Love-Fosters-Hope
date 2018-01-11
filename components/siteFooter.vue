@@ -1,13 +1,5 @@
 <template>
 	<div class="component__wrap">
-		<footer>
-			<div class="cell">
-				<span>&copy; {{currentYear}} LFH</span>
-			</div>
-			<div class="cell">
-				<socialIcons/>
-			</div>
-		</footer>
 	</div>
 </template>
 <script>

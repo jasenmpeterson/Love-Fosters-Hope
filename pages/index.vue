@@ -1,14 +1,14 @@
 <template>
   <div class="wrap">
-    <ourMission/>
-    <ourCamps/>
-    <mentors/>
+	  <banner/>
+	  <ourMission/>
   </div>
 </template>
 <script>
 // TODO - Dynamic meta name and content
 // TODO - Camps Section
 import axios from 'axios';
+import banner from '../components/banner.vue';
 import ourMission from '../components/ourMission.vue';
 import ourCamps from '../components/ourCamps.vue';
 import mentors from '../components/mentors.vue';
@@ -64,7 +64,8 @@ export default {
 	components: {
 		ourMission,
 		ourCamps,
-		mentors
+		mentors,
+		banner
 	}
 };
 </script>
