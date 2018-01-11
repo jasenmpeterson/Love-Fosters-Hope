@@ -8,10 +8,21 @@
 @import 'banner';
 
 @import 'page/our-mission';
+@import 'page/our-camps';
+@import 'page/mentors';
 
 // HEADER
 // ---------------------------------------------------------------------------
 
 header {
 	padding: 2rem;
+}
+
+// Footer
+// ---------------------------------------------------------------------------
+
+footer {
+	padding: 1.2rem;
+	color: #ffffff;
+	background-color: $color-steel;
 }

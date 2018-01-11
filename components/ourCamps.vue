@@ -1,13 +1,11 @@
 <template>
-  <div class="component__wrap margin__top__20" v-if="pageData.campsData">
-    <div class="content__wrap" v-for="(componentData, index) in pageData.campsData" v-bind:key="index">
-      <div class="cell cell__50">
-        <div class="material__wrap --sharp__corners --no__shadow">
-          <article class="header__yellow paragraph_white" v-html="componentData.content.rendered"></article>
-        </div>
+  <div class="our__camps home__page" v-if="pageData.campsData">
+    <div class="row" v-for="(componentData, index) in pageData.campsData" v-bind:key="index">
+      <div class="col col-5">
+        <article class="our__camps__content home__page" v-html="componentData.content.rendered"></article>
       </div>
-      <div class="cell cell__50">
-        <div class="background__yellow" style="height: 100%"></div>
+      <div class="col col-7">
+        <div class="our__camps__bg__placeholder"></div>
       </div>
     </div>
   </div>

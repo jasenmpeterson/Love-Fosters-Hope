@@ -1,6 +1,14 @@
 <template>
-	<div class="component__wrap">
-	</div>
+	<footer>
+		<div class="row">
+			<div class="col col-4">
+				&copy; {{currentYear}} LFH
+			</div>
+			<div class="col col-4">
+				
+			</div>
+		</div>
+	</footer>
 </template>
 <script>
 import socialIcons from './social.vue';

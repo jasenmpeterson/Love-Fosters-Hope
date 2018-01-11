@@ -2,6 +2,8 @@
   <div class="wrap">
 	  <banner/>
 	  <ourMission/>
+	  <ourCamps/>
+	  <mentors/>
   </div>
 </template>
 <script>
