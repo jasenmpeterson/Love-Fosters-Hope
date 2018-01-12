@@ -6,3 +6,39 @@
 	background-color: $color-steel;
 	height: 100%;
 }
+
+.camps__content__wrap {
+	position: relative;
+	padding: 6rem 2rem;
+	background-color: $color-yellow;
+	color: #ffffff;
+}
+
+.camps__list__wrap {
+	min-height: 500px;
+}
+
+.camps__list__wrap .row {
+	height: 100%;
+}
+
+.camps__list__wrap aside {
+	background-color: $color-steel;
+	color: #ffffff;
+	height: 100%;
+	padding: 1.5rem;
+}
+
+.camps__list__wrap ul {
+	list-style-type: none;
+	margin: 0;
+	padding-top: 2rem;
+}
+
+.camps__list__wrap .big {
+	float: right;
+}
+
+.camps__list__content {
+	padding: 2rem;
+}

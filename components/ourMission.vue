@@ -2,8 +2,8 @@
  	<div class="page page__our-mission">
 		 <div class="intro align__text__center">
 			<img class="heart__emblem" src="/icons/heart_emblem.svg">
-			<h1 class="title uppercase">Love<br/>Fosters<br/>Hope</h1>
-			<h2 class="uppercase">This is my home.<br/>This is my family.</h2>			 
+			<h1 class="title upper">Love<br/>Fosters<br/>Hope</h1>
+			<h2 class="upper">This is my home.<br/>This is my family.</h2>			 
 		 </div>
 		<div class="about__content__wrap home__page">
 			<div v-for="(componentData, index) in pageData.missionData" v-bind:key="index">

@@ -1,38 +1,56 @@
 <template>
-  <div class="wrap">
-    <div class="component__wrap" v-if="pageData.ourCamps">
-      <div class="row margin__bottom__5 margin__top__10">
-        <div class="content__wrap --columns --center__vertical" v-for="(data, index) in pageData" v-bind:key="index">
-					<div class="cell cell__75">
-						<div class="material__wrap --medium">
-							<article  class="header__yellow" v-html="data.acf.row_one.column_one"></article>
-						</div>						
-					</div>
-        </div>
-      </div>			
-			<div class="row margin__bottom__5">
-				<div class="content__wrap --center">
-          <div class="cell cell__75">
-            <div class="flex camp__description__wrap">
-              <nuxt-link :to="`/camp/${data.content.post_name}`" v-for="(data, index) in pageData.ourCamps.acf.row_two.camps" v-bind:key="index">
-                <article class="material__wrap --medium height__100">
-                  <div class="article__wrap header__yellow flex --columns --space__between height__100">
-                    <h1>{{data.content.post_title}}</h1>
-                    <p>{{$options.filters.truncate(data.content.post_content, '200')}}</p>
-                  </div>
-                </article>
-              </nuxt-link>
-            </div>
-          </div>					
+  <div class="our__camps__page">
+		<banner>
+			<template slot="header">
+				<h1 class="upper">Camps</h1>
+			</template>
+			<template slot="paragraph">
+				<p class="large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non mauris est. Donec justo quam, tempus non odio eu, pellentesque sagittis sapien. Donec et tortor non nulla porttitor suscipit. Ut eu mauris justo. Nunc nisi turpis, mattis quis arcu convallis, porta tincidunt augue. Suspendisse eu lacinia nibh, in lacinia arcu. Vivamus ut velit ac lectus finibus ornare et at mauris. Phasellus accumsan a sapien at tempus.</p>
+			</template>
+		</banner>
+		<section class="camps__content__wrap">
+			<div class="row">
+				<div class="col col-6">
+					<h1 class="upper">2018 <br/> Summer <br/> Camps</h1>
 				</div>
-			</div>	
-    </div>
+			</div>
+		</section>
+		<section class="camps__list__wrap">
+			<div class="row">
+				<div class="col col-2">
+					<aside>
+						<span class="close big"></span>
+						<ul>
+							<li>Royal Family Kids</li>
+							<li>Bridge</li>
+							<li>Teen Reach (Girls)</li>
+							<li>Teen Reach (Boys)</li>
+						</ul>
+					</aside>					
+				</div>
+				<div class="col col-10">
+					<div class="row">
+						<div class="col col-6">
+							<section class="camps__list__content">
+								<h1 class="upper">Royal <br> Family <br/> Kids</h1>
+								<h4 class="camp__ages upper">Ages: 7-11</h4>
+								<h4 class="camp__start__date">January 10th - January 15th</h4>
+								<p class="large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non mauris est. Donec justo quam, tempus non odio eu, pellentesque sagittis sapien. Donec et tortor non nulla porttitor suscipit. Ut eu mauris justo. Nunc nisi turpis, mattis quis arcu convallis, porta tincidunt augue. Suspendisse eu lacinia nibh, in lacinia arcu. Vivamus ut velit ac lectus finibus ornare et at mauris. Phasellus accumsan a sapien at tempus.</p>
+								<button>Sign Up</button>
+								<button>Volunteer</button>
+							</section>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>		
   </div>
 </template>
 
 <script>
 import axios from 'axios';
 import NuxtLink from '../.nuxt/components/nuxt-link';
+import banner from '../components/banner.vue';
 import { mapGetters } from 'vuex';
 export default {
 	async asyncData({ store, params }) {
@@ -68,6 +86,9 @@ export default {
 		...mapGetters({
 			pageData: 'pageData'
 		})
+	},
+	components: {
+		banner
 	}
 };
 </script>
