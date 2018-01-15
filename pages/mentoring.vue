@@ -72,15 +72,6 @@
           </div>
         </div>
     </section>     
-    <section class="mentors__page__quote">
-      <div class="row align-center">
-        <div class="col col-6">
-          <blockquote>
-            <h2>You don’t trip over it, or run into it, you plan and strive for the life you deserve.</h2>
-          </blockquote>
-        </div>
-      </div>
-    </section>
     <section class="mentors__page__volunteer">
       <div class="row align-center align__text__center">
         <div class="col col-6">
@@ -90,7 +81,14 @@
           <button>Volunteer</button>
         </div>
       </div>
-    </section>    
+    </section> 
+    <section class="mentors__page__quote">
+      <div class="row align-center align__text__center">
+        <div class="col col-6">
+          <h2>You don’t trip over it, or run into it, you plan and strive for the life you deserve.</h2>
+        </div>
+      </div>
+    </section>       
   </div>
 </template>
 <script>

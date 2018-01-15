@@ -1,11 +1,9 @@
 <template>
-  <main>
-      <siteHeader/>
-      <div class="page__wrap">
-        <nuxt/>
-        <siteFooter/>
-      </div>
-  </main>
+  <div class="page__wrap">
+    <siteHeader/>
+    <nuxt/>
+    <siteFooter/>
+  </div>
 </template>
 
 <script>
