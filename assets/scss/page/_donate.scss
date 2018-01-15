@@ -1,0 +1,40 @@
+.donate__page button {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.featured__need__wrap {
+	position: relative;
+}
+
+.featured__needs__wrap {
+	max-width: 98%;
+	margin: 2rem auto;
+}
+
+.featured_need_modal {
+	border-radius: 0.5rem;
+	border: 1px solid $color-steel;
+	position: relative;
+	padding-bottom: 1.5rem;
+}
+
+.featured__need__modal .image {
+	max-width: 100%;
+}
+
+.featured__need__modal__content {
+	padding: 1.5rem;
+}
+
+.donations__wrap {
+	margin: 5rem 0;
+	position: relative;
+}
+
+.donations__wrap button {
+	position: relative;
+}

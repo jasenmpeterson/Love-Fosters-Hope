@@ -1,12 +1,12 @@
 <template>
 	<nav>
 		<ul>
-      <li v-for="(page, index) in navigation[0]" :key="index">
-        <nuxt-link :to="`/${page.object_slug}`">
-          {{ page.title }}
-        </nuxt-link>
-      </li>
-    </ul>
+			<li v-for="(page, index) in navigation[0]" :key="index">
+				<nuxt-link :to="`/${page.object_slug}`">
+					{{ page.title }}
+				</nuxt-link>
+			</li>
+		</ul>
 	</nav>
 </template>
 <script>

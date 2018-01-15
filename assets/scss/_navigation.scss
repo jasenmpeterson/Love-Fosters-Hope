@@ -1,0 +1,21 @@
+nav ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+nav ul li {
+	flex: 1;
+	text-align: center;
+}
+
+nav ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $color-steel;
+	font-weight: 900;
+	transition: color 300ms ease-out;
+}
+
+nav ul li a:hover {
+	color: $color-yellow;
+}

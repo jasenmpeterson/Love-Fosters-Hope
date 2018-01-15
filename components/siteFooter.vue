@@ -1,14 +1,14 @@
 <template>
-	<div class="component__wrap">
-		<footer>
-			<div class="cell">
-				<span>&copy; {{currentYear}} LFH</span>
+	<footer>
+		<div class="row">
+			<div class="col col-4">
+				&copy; {{currentYear}} LFH
 			</div>
-			<div class="cell">
-				<socialIcons/>
+			<div class="col col-4">
+				
 			</div>
-		</footer>
-	</div>
+		</div>
+	</footer>
 </template>
 <script>
 import socialIcons from './social.vue';

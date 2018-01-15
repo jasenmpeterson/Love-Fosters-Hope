@@ -2,19 +2,12 @@
   <div class="our__camps__page">
 		<banner>
 			<template slot="header">
-				<h1 class="upper">Camps</h1>
+				<h1 class="upper">Outreach</h1>
 			</template>
 			<template slot="paragraph">
 				<p class="large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non mauris est. Donec justo quam, tempus non odio eu, pellentesque sagittis sapien. Donec et tortor non nulla porttitor suscipit. Ut eu mauris justo. Nunc nisi turpis, mattis quis arcu convallis, porta tincidunt augue. Suspendisse eu lacinia nibh, in lacinia arcu. Vivamus ut velit ac lectus finibus ornare et at mauris. Phasellus accumsan a sapien at tempus.</p>
 			</template>
 		</banner>
-		<section class="camps__content__wrap">
-			<div class="row">
-				<div class="col col-6">
-					<h1 class="upper">2018 <br/> Summer <br/> Camps</h1>
-				</div>
-			</div>
-		</section>
 		<section class="camps__list__wrap">
 			<div class="row">
 				<div class="col col-2">

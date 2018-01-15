@@ -1,12 +1,14 @@
 <template>
-  <header class="header">
-    <div class="cell logo__container">
-      <nuxt-link to="/">
-				Love Fosters Hope
-      </nuxt-link>
-    </div>
-    <div class="cell nav__container">
-		<navigation/>
+  <header>
+    <div class="row auto">
+      <div class="col">
+        <nuxt-link to="/">
+          Love Fosters Hope
+        </nuxt-link>
+      </div>
+      <div class="col">
+        <navigation/>
+      </div>
     </div>
   </header>
 </template>
